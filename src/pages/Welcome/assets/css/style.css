@@ -7,26 +7,52 @@ body {
   .sidebar {
     height: 100%;
     width: 250px;
-    background-color: #333;
+    background-color: rgba(206, 51, 45, 1);
     position: fixed;
     top: 0;
     left: 0;
-    padding-top: 20px;
+    padding-top: 400px;
+    line-height: 60px;
     color: white;
   }
 
-  .content {
-    margin-left: 400px;
+  .frame-celebration {
+    margin-top: 300px;
+    margin-left: 740px;
     padding: 20px;
   }
 
-  .access-button {
-    
+  .container-welcome {
+    padding: 20px;
+    text-align: center;
   }
 
-  h1 {
-    color: rgb(0, 0, 0);
+  .button-container {
+    display: flex;
+    width: 740px;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px auto; 
   }
-  h2 {
-    color: crimson;
+
+  .access-button {
+    flex: 1;
+    height: 50px;
+    background-color: rgba(206, 51, 45, 1);
+    color: #ffffff;
+    border: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
   }
+
+  .logo-ome {
+    margin-left: 95px;
+    margin-top: 250px;
+    color: rgb(255, 255, 255);
+    position: fixed;
+  }
+
+  ul.circle {
+    list-style: disc;
+    }

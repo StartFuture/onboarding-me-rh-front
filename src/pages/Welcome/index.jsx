@@ -7,15 +7,23 @@ const Welcome = () => {
     <SideBar/>
   </div>
 
-<div class="content">
-    <img src="src\pages\Welcome\assets\img\Celebration-amico.png" alt="imagem de 3 pessoas comemorando" />
+<div class="frame-celebration">
+   <img src="src\pages\Welcome\assets\img\Celebration-amico.png" alt="imagem de 3 pessoas comemorando" />
+  </div>
+
+<div class="container-welcome">
     <h1>Bem Vindo a</h1>
     <h2>ONBOARDING/ME</h2>
   </div>
 
-<div>
-  <button class="access-button">Entrar</button>
+<div class="button-container">
+    <button class="access-button">Acessar Portal</button>
   </div>
+
+<div class="logo-ome">
+  <h2>O/ME</h2>
+  </div>
+
 </>
   );
 };

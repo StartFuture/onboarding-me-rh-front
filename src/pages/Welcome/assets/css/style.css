@@ -1,7 +1,9 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    background-color: #F9F9F9;
+    box-sizing: border-box;
+    list-style: none;
   }
 
   .sidebar {
@@ -16,24 +18,27 @@ body {
     color: white;
   }
 
-  .frame-celebration {
-    margin-top: 300px;
-    margin-left: 740px;
-    padding: 20px;
+  .nav-itens>li>a{
+    color: #ffffff;
+    text-decoration: none;
+    
   }
 
   .container-welcome {
+    margin-top: 450px;
+    margin-left: 350px;
     padding: 20px;
     text-align: center;
   }
 
   .button-container {
     display: flex;
-    width: 740px;
-    gap: 10px;
-    justify-content: flex-start;
+    width: 744px;
+    height: 50px;
+    gap: 8px;
+    justify-content: center;
     align-items: center;
-    margin: 20px auto; 
+    margin: 10px 37%;
   }
 
   .access-button {
@@ -45,14 +50,18 @@ body {
     font-size: 16px;
     transition: background-color 0.3s ease;
   }
-
-  .logo-ome {
-    margin-left: 95px;
-    margin-top: 250px;
+  
+  .logo-ome{
     color: rgb(255, 255, 255);
     position: fixed;
+    margin-top: 470px;
+    margin-left: 90px;
   }
 
-  ul.circle {
-    list-style: disc;
-    }
+  .logo-onboarding{
+    fill: var(--primary, #CE332D);
+    margin-right: 100px;
+    width: 525.666px;
+    height: 28.414px;
+    flex-shrink: 0;
+  }

@@ -6,6 +6,7 @@ const AppRoutes = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/forms-company" element={<FormsCompany/>} />
+        
       </Routes>
     </BrowserRouter>
   );

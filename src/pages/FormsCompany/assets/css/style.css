@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* label {
+  background: #ce332d;
+  width: Fixed (359px);
+  height: Fixed (1, 200px);
+  padding: 400px 24px 72px 24px;
+  justify-content: space-between;
+} */
+/* label{
+  border: 1px solid red;
+display: flex;
+width: 300px;
+} */
+.timeline{
+  width:359px;
+  background:#ce332d ;
+  height: 100vh;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.divinput{
+  display: flex;
+  flex-direction: column;
+  gap: 67px;
+  color: white;
+}

@@ -13,26 +13,38 @@ const Form = () => {
         <h4>Razão Social</h4>
         <input type="text" placeholder="Digite aqui" />
         <div className="cnpj-container">
-          <h4>CNPJ</h4>
-          <input type="text" placeholder="Digite aqui" />
-          <h4>Inscrição Estadual</h4>
-          <input type="text" placeholder="Digite aqui" />
+          <div>
+            <h4>CNPJ</h4>
+            <input type="text" placeholder="Digite aqui" />
+          </div>
+          <div>
+            <h4>Inscrição Estadual</h4>
+            <input type="text" placeholder="Digite aqui" />
+          </div>
         </div>
+
+        <div class="send-soon">
+          <span>Envie o logo da sua empresa para uma maior identificação</span>
+          <hr />
+        </div>
+
+        <div class="checkbox">
+          <div>
+            <input type="checkbox" />
+            <label>Lorem ipsum dolor sit amet consectetur. Vitae elementum eget.</label>
+          </div>
+          <div>
+            <input type="checkbox" />
+            <label>Lorem ipsum dolor sit amet consectetur. Vitae elementum eget.</label>
+          </div>
+          <div>
+            <input type="checkbox" />
+            <label>Lorem ipsum dolor sit amet consectetur. Vitae elementum eget.</label>
+          </div>
+        </div>
+
+        <button className="nextbutton">Prosseguir</button>
       </form>
-
-      <div class="send-soon">
-        <span>Envie o logo da sua empresa para uma maior identificação</span>
-      </div>
-
-      <div class="checkbox">
-        <input type="checkbox" />
-        <input type="checkbox" />
-        <input type="checkbox" />
-      </div>
-
-      <div class="button">
-        <button>Prosseguir</button>
-      </div>
     </div>
   );
 };

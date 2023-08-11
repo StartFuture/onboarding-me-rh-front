@@ -3,31 +3,54 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-/* label {
-  background: #ce332d;
-  width: Fixed (359px);
-  height: Fixed (1, 200px);
-  padding: 400px 24px 72px 24px;
-  justify-content: space-between;
-} */
-/* label{
-  border: 1px solid red;
-display: flex;
-width: 300px;
-} */
-.timeline{
-  width:359px;
-  background:#ce332d ;
-  height: 100vh;
-  justify-content: center;
+.conteudo {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
 }
 
-.divinput{
+.form-container {
   display: flex;
+  height: 100vh;
+  width: 80%;
+  margin-left: 20%;
   flex-direction: column;
-  gap: 67px;
-  color: white;
+  align-items: center;
+  background: #f9f9f9;
+}
+
+.title{
+  width: 50%;
+  margin: 50px 0px 30px;
+}
+
+.title h3 {
+  color: var(--primary, #ce332d);
+  margin: 0px;
+  font-family: Lexend Exa;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  
+}
+.title span{
+  color: var(--gray-100, #2E2E2E);
+  font-size: 16px;
+}
+
+.company-form{
+  width: 50%;
+}
+.company-form input{
+  font-size: 16px;
+width:100% ;
+border-radius: 3px;
+padding: 15px 5px;
+border-color: #A0A0A0;
+border-style: solid;
+border-width: 1px;
+}
+
+.company-form h4{
+  margin: 25px 0px 8px;
 }

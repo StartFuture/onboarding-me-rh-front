@@ -8,7 +8,7 @@ body {
 
   .sidebar {
     height: 100%;
-    width: 250px;
+    width: 20%;
     background-color: rgba(206, 51, 45, 1);
     position: fixed;
     top: 0;
@@ -18,18 +18,29 @@ body {
     color: white;
   }
 
-  .nav-itens>li>a{
+  .nav-itens>li>a {
     color: #ffffff;
     text-decoration: none;
-    
+    font-size: 18px;
+    font-weight: 250;
+  }
+
+  .status-itens {
+    display: flex;
+    align-items: center;
+    gap: 24px;
   }
 
   .container-welcome {
-    margin-top: 450px;
-    margin-left: 350px;
-    padding: 20px;
-    text-align: center;
+    width: 100%;
+    margin-left: 20%;
   }
+
+.content-welcome {
+  
+  text-align: center;
+  align-items: center;
+}
 
   .button-container {
     display: flex;
@@ -49,6 +60,7 @@ body {
     border: none;
     font-size: 16px;
     transition: background-color 0.3s ease;
+    border-radius: 4px;
   }
   
   .logo-ome{
@@ -64,4 +76,8 @@ body {
     width: 525.666px;
     height: 28.414px;
     flex-shrink: 0;
+  }
+
+  .welcome-image{
+    width: 20%;
   }

@@ -38,3 +38,23 @@
 .logo-onboarding {
   width: 80% !important;
 }
+
+@media (max-width: 600px) {
+  .container-welcome {
+    width: 100%;
+  }
+
+  .content-welcome {
+    width: 85%;
+  }
+
+  .content-welcome h1 {
+    font-size: 38px;
+    font-weight: 300;
+  }
+
+  .content-welcome img {
+    width: 80%;
+  }
+}
+

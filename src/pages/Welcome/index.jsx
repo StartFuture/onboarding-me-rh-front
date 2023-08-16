@@ -7,8 +7,8 @@ const Welcome = () => {
   return (
     <>
       <SideBar />
-
       <div class="container-welcome">
+        <div class="bar-mobile"></div>
         <div class="content-welcome">
           <img src={WelcomeImage} alt="" />
           <h1>Bem Vindo a</h1>

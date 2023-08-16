@@ -39,6 +39,10 @@
   width: 80% !important;
 }
 
+.bar-mobile {
+  display: none;
+}
+
 @media (max-width: 600px) {
   .container-welcome {
     width: 100%;
@@ -55,6 +59,13 @@
 
   .content-welcome img {
     width: 80%;
+  }
+
+  .bar-mobile {
+    background-color: rgba(206, 51, 45, 1);
+    display: block;
+    height: 4%;
+    width: 100%;
   }
 }
 

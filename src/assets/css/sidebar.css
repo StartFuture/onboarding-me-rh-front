@@ -1,0 +1,37 @@
+.sidebar {
+  height: 100%;
+  width: 20%;
+  background-color: rgba(206, 51, 45, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 400px;
+  line-height: 60px;
+  color: white;
+}
+
+.nav-itens li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 250;
+}
+
+.status-itens {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo-ome {
+  color: rgb(255, 255, 255);
+  position: fixed;
+  margin-top: 470px;
+  margin-left: 90px;
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+}

@@ -1,83 +1,40 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #F9F9F9;
-    box-sizing: border-box;
-    list-style: none;
-  }
-
-  .sidebar {
-    height: 100%;
-    width: 20%;
-    background-color: rgba(206, 51, 45, 1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding-top: 400px;
-    line-height: 60px;
-    color: white;
-  }
-
-  .nav-itens>li>a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 250;
-  }
-
-  .status-itens {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-  }
-
-  .container-welcome {
-    width: 100%;
-    margin-left: 20%;
-  }
-
-.content-welcome {
-  
-  text-align: center;
-  align-items: center;
+.container-welcome {
+  margin-left: auto;
+  width: 80%;
+  height: 100vh;
 }
 
-  .button-container {
-    display: flex;
-    width: 744px;
-    height: 50px;
-    gap: 8px;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 37%;
-  }
+.content-welcome {
+  width: 50%;
+  height: 30vh;
+  margin: auto;
+  padding-top: 15vh;
+  text-align: center;
+}
 
-  .access-button {
-    flex: 1;
-    height: 50px;
-    background-color: rgba(206, 51, 45, 1);
-    color: #ffffff;
-    border: none;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    border-radius: 4px;
-  }
-  
-  .logo-ome{
-    color: rgb(255, 255, 255);
-    position: fixed;
-    margin-top: 470px;
-    margin-left: 90px;
-  }
+.content-welcome button {
+  margin-top: 30px;
+  width: 100%;
+  background-color: rgba(206, 51, 45, 1);
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+  padding: 20px 0px;
+}
 
-  .logo-onboarding{
-    fill: var(--primary, #CE332D);
-    margin-right: 100px;
-    width: 525.666px;
-    height: 28.414px;
-    flex-shrink: 0;
-  }
+.content-welcome img {
+  width: 50%;
+}
 
-  .welcome-image{
-    width: 20%;
-  }
+.content-welcome h1 {
+  color: #2e2e2e;
+  font-size: 48px;
+  font-weight: 600;
+  margin-top: 0px;
+}
+
+.logo-onboarding {
+  width: 80% !important;
+}

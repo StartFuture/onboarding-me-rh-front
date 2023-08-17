@@ -1,4 +1,5 @@
 import "../../assets/css/style.css";
+import Upload from "../../assets/img/Upload.svg";
 const Form = () => {
   return (
     <div className="form-container">
@@ -24,22 +25,32 @@ const Form = () => {
         </div>
 
         <div class="send-soon">
-          <span>Envie o logo da sua empresa para uma maior identificação</span>
-          <hr />
+          <span>Envie o logo da sua empresa para uma maior identificação</span>.
+          <div class="logoimg">
+            <img src={Upload} alt="enviar logo da empresa" />
+            <span>Clique ou arraste o logo da sua empresa</span>
+          </div>
         </div>
+        <hr />
 
         <div class="checkbox">
           <div>
             <input type="checkbox" />
-            <label>Lorem ipsum dolor sit amet consectetur. Vitae elementum eget.</label>
+            <label>
+              Lorem ipsum dolor sit amet consectetur. Vitae elementum eget.
+            </label>
           </div>
           <div>
             <input type="checkbox" />
-            <label>Lorem ipsum dolor sit amet consectetur. Vitae elementum eget.</label>
+            <label>
+              Lorem ipsum dolor sit amet consectetur. Vitae elementum eget.
+            </label>
           </div>
           <div>
             <input type="checkbox" />
-            <label>Lorem ipsum dolor sit amet consectetur. Vitae elementum eget.</label>
+            <label>
+              Lorem ipsum dolor sit amet consectetur. Vitae elementum eget.
+            </label>
           </div>
         </div>
 

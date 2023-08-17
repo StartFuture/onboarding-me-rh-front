@@ -88,16 +88,39 @@ body {
 
 .checkbox div {
   display: flex;
-
 }
 
 .checkbox input {
   width: 25px;
 }
 
-.checkbox label{
+.checkbox label {
   color: var(--gray-100, #2e2e2e);
   font-family: Open Sans;
   font-size: 16px;
-  
+}
+
+.logoimg img{
+  display: flex;
+  padding: 15px;
+  margin: auto;
+  margin-top: 15px;
+  width: 15%;
+}
+.logoimg{
+  height: 30vh;
+  border-style: dashed;
+  border-color: #ce332d;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.send-soon {
+  margin-top: 50px;
+}
+.logoimg span{
+  margin-bottom: 100px;
+  color: #2E2E2E;
+  font-size: 16px;
+  font-weight: 300;
 }

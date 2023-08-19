@@ -30,9 +30,9 @@ module "frontend_codebuild" {
 
   account_id             = local.account_id
   aws_region             = var.aws_region
-  project_name           = var.frontend_codebuild_project_name
   environment            = var.environment
-  subnet_ids             = module.networking.public_subnet_ids
+  project_name           = var.frontend_codebuild_project_name
+  subnet_ids             = var.frontend_codebuild_subnet_ids
   builder_image          = var.frontend_builder_image
   builder_compute_type   = var.frontend_builder_compute_type
   builder_type           = var.frontend_builder_type

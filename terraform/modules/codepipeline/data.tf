@@ -15,13 +15,18 @@ data "aws_iam_policy_document" "codepipeline_policy" {
       "${var.codepipeline_bucket_arn}/*"
     ]
   }
-
   statement {
-    effect    = "Allow"
-    actions   = ["codestar-connections:UseConnection"]
-    resources = [var.codestar_connection_arn]
-  }
+    effect = "Allow"
 
+    actions = [
+      "codestar-connections:UseConnection"
+    ]
+
+    resources = [
+      "*"
+    ]
+  }
+  
   statement {
     effect = "Allow"
 

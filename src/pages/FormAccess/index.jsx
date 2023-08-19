@@ -6,6 +6,7 @@ const FormAccess = () => {
     <>
       <SideBar />
       <div class="container-form">
+      <div class="bar-mobile"></div>
         <div class="content-form">
           <h3>Informe o seu acesso</h3>
           <h5>Campos obrigatórios sinalizados com  <strong>*</strong></h5>

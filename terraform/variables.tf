@@ -64,7 +64,7 @@ variable "frontend_repository_id" {
 variable "frontend_branch_name" {
   description = "Frontend branch name"
   type        = string
-  default     = "feature/pipeline-aws"
+  default     = "feat/pipeline"
 }
 
 variable "frontend_codebuild_project_name" {

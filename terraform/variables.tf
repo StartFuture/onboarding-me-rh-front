@@ -82,7 +82,7 @@ variable "frontend_codebuild_subnet_ids" {
 variable "frontend_builder_image" {
   description = "Frontend builder image"
   type        = string
-  default     = "aws/codebuild/standard:4.0"
+  default     = "aws/codebuild/standard:5.0"
 }
 
 variable "frontend_builder_type" {

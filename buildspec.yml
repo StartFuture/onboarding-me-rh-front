@@ -4,7 +4,6 @@ phases:
     commands:
       - echo Installing source NPM dependencies...
       - n install 18
-      - n install -g npm
   pre_build:
     commands:
       - npm --version

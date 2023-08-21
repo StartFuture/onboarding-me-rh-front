@@ -44,16 +44,21 @@ resource "aws_codepipeline" "codepipeline" {
     }
   }
 
-  #   stage {
-  #     name = "Deploy"
+  stage {
+    name = "Deploy"
 
-  #     action {
-  #       name            = "Deploy"
-  #       category        = "Deploy"
-  #       owner           = "AWS"
-  #       provider        = "Server"
-  #       input_artifacts = ["build_output"]
-  #       version         = "1"
-  #     }
-  #   }
+    action {
+      name            = "Deploy"
+      category        = "Deploy"
+      owner           = "AWS"
+      provider        = "S3"
+      input_artifacts = ["build_output"]
+      version         = "1"
+
+      configuration = {
+        BucketName = var.deploy_bucket_name
+        Extract    = "true"
+      }
+    }
+  }
 }

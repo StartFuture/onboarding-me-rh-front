@@ -1,33 +1,22 @@
-.sidebar {
-  height: 100%;
+.container-sidebar {
+  height: 100vh;
   width: 20%;
   background-color: rgba(206, 51, 45, 1);
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-top: 400px;
-  line-height: 60px;
-  color: white;
-}
-
-.nav-itens li a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 250;
-}
-
-.status-itens {
+  padding: 0px;
+  margin: 0px;
   display: flex;
-  align-items: center;
-  gap: 24px;
+  position: fixed;
 }
 
-.logo-ome {
-  color: rgb(255, 255, 255);
-  position: fixed;
-  margin-top: 470px;
-  margin-left: 90px;
+.container-sidebar {
+  height: 100vh;
+  width: 20%;
+}
+
+.circle {
+  border-radius: 50%;
+  background-color: white;
+  width: 20px;
 }
 
 @media (max-width: 600px) {

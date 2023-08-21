@@ -15,7 +15,9 @@ variable "tags" {
   type        = map(any)
   default = {
     "Owner" : "Start Future",
-    "Website" : "onboarding-rh.startfuture.com.br"
+    "Website" : "onboarding-rh.startfuture.com.br",
+    "Project" : "Onboarding RH",
+    "Team" : "Turma 3"
   }
 }
 
@@ -31,8 +33,8 @@ variable "domain_name" {
   default     = "startfuture.com.br"
 }
 
-variable "codestar_connection_name" {
-  description = "CodeStar Connection name to the repository (must be already created)"
+variable "codestar_connection_arn" {
+  description = "CodeStar Connection ARN to the repository (must be already created)"
   type        = string
   default     = "arn:aws:codestar-connections:us-east-1:678604849177:connection/71bac765-abd7-4e3c-9f2a-077269558c26"
 }
@@ -64,7 +66,7 @@ variable "frontend_repository_id" {
 variable "frontend_branch_name" {
   description = "Frontend branch name"
   type        = string
-  default     = "feature/pipeline-aws"
+  default     = "main"
 }
 
 variable "frontend_codebuild_project_name" {
@@ -73,10 +75,16 @@ variable "frontend_codebuild_project_name" {
   default     = "build-turma-3-rh"
 }
 
+variable "frontend_codebuild_subnet_ids" {
+  description = "Frontend CodeBuild subnet IDs"
+  type        = list(string)
+  default     = ["subnet-0c0d5121c978d878b", "subnet-05665abe21d607b51"]
+}
+
 variable "frontend_builder_image" {
   description = "Frontend builder image"
   type        = string
-  default     = "aws/codebuild/standard:4.0"
+  default     = "aws/codebuild/standard:5.0"
 }
 
 variable "frontend_builder_type" {

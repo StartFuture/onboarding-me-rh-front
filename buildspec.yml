@@ -1,8 +1,11 @@
 version: 0.2
 phases:
-  pre_build:
+  install:
     commands:
       - echo Installing source NPM dependencies...
+      - n install 18
+  pre_build:
+    commands:
       - npm --version
       - npm install
   build:

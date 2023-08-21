@@ -66,7 +66,7 @@ variable "frontend_repository_id" {
 variable "frontend_branch_name" {
   description = "Frontend branch name"
   type        = string
-  default     = "feat/pipeline"
+  default     = "main"
 }
 
 variable "frontend_codebuild_project_name" {

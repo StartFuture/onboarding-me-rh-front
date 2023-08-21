@@ -9,12 +9,22 @@ variable "repository_id" {
 }
 
 variable "codepipeline_bucket" {
-  description = "CodePipeline Artifact Bucket"
+  description = "CodePipeline artifact Bucket"
   type        = string
 }
 
 variable "codepipeline_bucket_arn" {
-  description = "Bucket ARN"
+  description = "CodePipeline artifact bucket ARN"
+  type        = string
+}
+
+variable "deploy_bucket_name" {
+  description = "Deployment bucket name"
+  type        = string
+}
+
+variable "deploy_bucket_arn" {
+  description = "Deployment bucket ARN"
   type        = string
 }
 

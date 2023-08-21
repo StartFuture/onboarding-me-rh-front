@@ -15,7 +15,9 @@ variable "tags" {
   type        = map(any)
   default = {
     "Owner" : "Start Future",
-    "Website" : "onboarding-rh.startfuture.com.br"
+    "Website" : "onboarding-rh.startfuture.com.br",
+    "Project" : "Onboarding RH",
+    "Team" : "Turma 3"
   }
 }
 

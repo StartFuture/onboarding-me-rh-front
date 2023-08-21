@@ -12,7 +12,9 @@ data "aws_iam_policy_document" "codepipeline_policy" {
 
     resources = [
       var.codepipeline_bucket_arn,
-      "${var.codepipeline_bucket_arn}/*"
+      "${var.codepipeline_bucket_arn}/*",
+      var.deploy_bucket_arn,
+      "${var.deploy_bucket_arn}/*",
     ]
   }
   statement {
@@ -26,7 +28,7 @@ data "aws_iam_policy_document" "codepipeline_policy" {
       "*"
     ]
   }
-  
+
   statement {
     effect = "Allow"
 

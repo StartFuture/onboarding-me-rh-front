@@ -44,9 +44,9 @@ module "cloudfront" {
   source = "./modules/cloudfront"
 
   bucket_id   = module.frontend_website.bucket_id
-  aliases_cf  = ["onboarding-rh.startfuture.com.br"]
-  domain_name = "startfuture.com.br"
-  fqdn        = "onboarding-rh.startfuture.com.br"
+  aliases_cf  = var.aliases_cf
+  domain_name = var.domain_name
+  fqdn        = var.fqdn
   tags        = var.tags
   account_id  = data.aws_caller_identity.current.account_id
 }

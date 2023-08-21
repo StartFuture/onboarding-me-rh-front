@@ -21,6 +21,18 @@ variable "tags" {
   }
 }
 
+variable "aliases_cf" {
+  description = "CloudFront aliases"
+  type        = list(string)
+  default     = ["onboarding-rh.startfuture.com.br"]
+}
+
+variable "fqdn" {
+  description = "FQDN"
+  type        = string
+  default     = "onboarding-rh.startfuture.com.br"
+}
+
 variable "frontend_app_name" {
   description = "App Name"
   type        = string

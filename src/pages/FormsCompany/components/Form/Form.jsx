@@ -1,5 +1,6 @@
 import "../../assets/css/style.css";
-import Upload from "../../assets/img/Upload.svg";
+import DragDrop from "../DragDrop/DragDrop";
+
 const Form = () => {
   return (
     <div className="form-container">
@@ -25,12 +26,11 @@ const Form = () => {
         </div>
 
         <div class="send-soon">
-          <span>Envie o logo da sua empresa para uma maior identificação</span>.
-          <div class="logoimg">
-            <img src={Upload} alt="enviar logo da empresa" />
-            <span>Clique ou arraste o logo da sua empresa</span>
-          </div>
-        </div>
+          <span>Envie o logo da sua empresa para uma maior identificação.</span>
+
+          <DragDrop />
+        </div> 
+
         <hr />
 
         <div class="checkbox">

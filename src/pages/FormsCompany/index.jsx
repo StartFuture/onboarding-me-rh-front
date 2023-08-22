@@ -1,12 +1,13 @@
-import TimeLine from "../../components/TimeLine";
 import "./assets/css/style.css";
-import Form from "./components/Form";
+import Timeline from "../../components/TimeLine";
+import Form from "./components/Form/Form";
+
 const FormsCompany = () => {
   return (
     <>
       <div className="conteudo">
-        <TimeLine />
-        <Form/>
+        <Timeline />
+        <Form />
       </div>
     </>
   );

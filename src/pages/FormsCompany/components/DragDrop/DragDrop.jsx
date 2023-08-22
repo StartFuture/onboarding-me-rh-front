@@ -1,9 +1,11 @@
 import { useState, useRef } from "react";
 import Upload from "../../assets/img/Upload.svg";
+import RedTrashIcon from "../../../../assets/img/red-trash-icon.svg"
 import "../../assets/css/DragDrop.css";
 
 const DragDrop = () => {
-  const [image, setImage] = useState(Upload);
+  const [image, setImage] = useState(null);
+  const [preview, setPreview] = useState(Upload);
   const [dragActive, setDragActive] = useState(false);
   const inputRef = useRef(null);
 
@@ -24,8 +26,9 @@ const DragDrop = () => {
 
     const { files } = e.dataTransfer;
     if (files && files.length) {
+      setImage(files[0]);
       const objectUrl = URL.createObjectURL(files[0])
-      setImage(objectUrl);
+      setPreview(objectUrl)
     }
   };
 
@@ -33,8 +36,9 @@ const DragDrop = () => {
     e.preventDefault();
     const { files } = e.target;
     if (files && files.length) {
+      setImage(files[0]);
       const objectUrl = URL.createObjectURL(files[0])
-      setImage(objectUrl);
+      setPreview(objectUrl)
     }
   };
 
@@ -42,19 +46,50 @@ const DragDrop = () => {
     inputRef.current.click();
   };
 
-  return (
-    <form className="logoimg" onDragEnter={handleDrag} onSubmit={(e) => e.preventDefault()} onClick={onButtonClick}>
-      <input ref={inputRef} type="file" id="input-file-upload" 
-        multiple={true} onChange={handleChange} style={{display: "none"}} />
+  const handleRemoveImage = (e) => {
+    console.log(image);
+    setImage(null);
+    setPreview(Upload);
+  };
 
-      <label htmlFor="input-file-upload" className={dragActive ? "drag-active" : ""}>
+  const convertByteToMB = (bytes) => {
+    if (bytes) {
+      const fileSizeBytes = 9000000;
+      let fileSizeMB = fileSizeBytes / (1024 ** 2);
+      return fileSizeMB.toString().split(".")[0];
+    }
+
+    return 0;
+  }
+
+  return (
+    <>
+      <form style={{ display: image ? "none" : "block" }}
+        className="logoimg" onDragEnter={handleDrag} onSubmit={(e) => e.preventDefault()} onClick={onButtonClick}>
+        <input ref={inputRef} type="file" id="input-file-upload"
+          multiple={true} onChange={handleChange} style={{ display: "none" }} />
+
+        <label htmlFor="input-file-upload" className={dragActive ? "drag-active" : ""}>
+          <div>
+            <img src={preview} alt="enviar logo da empresa" />
+            <span>Clique ou arraste o logo da sua empresa</span>
+          </div>
+        </label>
+        {dragActive && <div id="drag-file-element" onDragEnter={handleDrag} onDragLeave={handleDrag} onDragOver={handleDrag} onDrop={handleDrop}></div>}
+      </form>
+
+      <div style={{ display: !image ? "none" : "flex" }} className="logo-inserted">
+        <img className="logo-inserted-preview" src={preview} alt="logo da sua empresa" />
         <div>
-          <img src={image} alt="enviar logo da empresa" />
-          <span>Clique ou arraste o logo da sua empresa</span>
+          <h4>{image?.name}</h4>
+          <span>{convertByteToMB(image?.size)}MB</span>
         </div>
-      </label>
-      {dragActive && <div id="drag-file-element" onDragEnter={handleDrag} onDragLeave={handleDrag} onDragOver={handleDrag} onDrop={handleDrop}></div>}
-    </form>
+
+        <div className="remove-button" onClick={handleRemoveImage}>
+          <img src={RedTrashIcon} alt="botão de excluir" />
+        </div>
+      </div>
+    </>
   );
 };
 

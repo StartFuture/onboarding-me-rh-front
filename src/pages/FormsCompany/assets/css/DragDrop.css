@@ -1,40 +1,3 @@
-#form-file-upload {
-    height: 16rem;
-    width: 28rem;
-    max-width: 100%;
-    text-align: center;
-    position: relative;
-}
-
-#label-file-upload {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-width: 2px;
-    border-radius: 1rem;
-    border-style: dashed;
-    border-color: #cbd5e1;
-    background-color: #f8fafc;
-}
-
-#label-file-upload.drag-active {
-    background-color: #ffffff;
-}
-
-.upload-button {
-    cursor: pointer;
-    padding: 0.25rem;
-    font-size: 1rem;
-    border: none;
-    font-family: 'Oswald', sans-serif;
-    background-color: transparent;
-}
-
-.upload-button:hover {
-    text-decoration-line: underline;
-}
-
 #drag-file-element {
     position: absolute;
     width: 100%;
@@ -68,4 +31,51 @@
     color: #2E2E2E;
     font-size: 16px;
     font-weight: 300;
+}
+
+.logo-inserted {
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 25px;
+    text-align: start;
+}
+
+.logo-inserted div {
+    width: 60%;
+}
+
+.logo-inserted h4 {
+    overflow: auto;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+
+    color: var(--secondary, #1E1E1E);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.logo-inserted span {
+    color: var(--secondary, #1E1E1E);
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.logo-inserted-preview {
+    width: 20%;
+    height: fit-content;
+    margin-right: 15px;
+    border-color: lightgray;
+    border-radius: 8px;
+    border-width: 1px;
+}
+
+.remove-button {
+    width: fit-content !important;
+    text-align: center;
+    vertical-align: auto;
+    writing-mode: vertical-lr
 }

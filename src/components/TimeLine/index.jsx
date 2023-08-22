@@ -1,5 +1,5 @@
 import "./style.css"
-const TimeLine = () =>{
+const Timeline = () =>{
   return(
     <div className="timeline">
     <div className="divinput">
@@ -20,4 +20,4 @@ const TimeLine = () =>{
   );
 };
 
-export default TimeLine
+export default Timeline

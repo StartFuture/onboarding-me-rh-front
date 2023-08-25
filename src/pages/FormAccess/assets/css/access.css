@@ -94,7 +94,7 @@
 
   .bar-mobile {
     background-color: rgba(206, 51, 45, 1);
-    display: block;
+    display: flex;
     height: 4%;
     width: 100%;
   }

@@ -5,9 +5,9 @@ const SideBar = () => {
   return (
     <>
 <div class="container-sidebar">
-  {/* <div class="content-sidebar"> */}
+  <div class="content-sidebar">
     <div class="circle"></div>
-  {/* </div> */}
+  </div>
 </div>
     </>
   );

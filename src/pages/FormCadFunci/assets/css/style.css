@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #F9F9F9;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: row;
+}
+
+.titleCad h4 {
+  height: 100%;
+  width: 80%;
+  font-size: 20px;
+}
+
+.cadastroFuncionario {
+  width: 30%;
+  padding-left: 0px;
+  padding-right: 60vh;
+  margin-left: 27%;
+  background: #FFF;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.cadastroFuncionario h4{
+  margin-left: 15px;
+}
+
+.namecomplete h4 {
+  top: 100px;
+}
+
+.namecomplete input {
+  display: flex;
+  width: 117vh;
+  margin-left: 15px;
+  padding: 8px;  
+}
+
+.cpfdate {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.cpfdate input {
+  padding: 10px;
+  margin-left: 15px;
+  width: 55vh;
+}
+
+
+.cargo h4 {
+  top: 100px;
+}
+
+.cargo input {
+  display: flex;
+  width: 117vh;
+  margin-left: 15px;
+  padding: 8px;  
+}
+
+
+.emailphone {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.emailphone input {
+  padding: 10px;
+  margin-left: 15px;
+  width: 55vh;
+}
+.codeState {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.codeState input {
+  padding: 10px;
+  margin-left: 15px;
+  width: 55vh;
+}
+
+
+.citystreet{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+.citystreet input {
+  padding: 10px;
+  margin-left: 15px;
+  width: 55vh;
+}
+
+.numbercomplement{
+
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.numbercomplement input{
+  padding: 10px;
+  margin-left: 15px;
+  width: 55vh;
+}
+
+.kits{
+  display: flex;
+  justify-content: space-between;
+}
+
+.kits input{
+  margin-top: 2px;
+  padding: 10px;
+  margin-left: 15px;
+  width: 55vh;
+}
+
+
+
+.btn{
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn button{
+  margin-top: 30px;
+  padding: 8px;
+  margin-left: 15px;
+  width: 59vh;
+  cursor: pointer;
+
+}
+
+
+#btn-salvar{
+  background-color: #ce332d;
+  border-radius: 3px;
+  font-family: 'Open Sans', sans-serif;
+}
+

@@ -111,16 +111,11 @@ const FormsCadFunci = () => {
               </div>
             </div>
 
-
             <div className="btn">
-              <div>
-                <button>Cancelar</button>
-              </div>
-              <div>
-                <button id="btn-salvar">Salvar</button>
-              </div>
-            </div>
 
+              <button className="btn-cancelar">Cancelar</button>
+              <button className="btn-salvar">Salvar</button>
+            </div>
           </form>
         </div>
       </div>

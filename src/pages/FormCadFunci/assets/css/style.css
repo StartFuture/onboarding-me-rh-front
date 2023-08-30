@@ -1,14 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background: #F9F9F9;
-}
-
-.conteudo {
-  display: flex;
-  flex-direction: row;
-}
 
 .titleCad h4 {
   height: 100%;
@@ -16,132 +5,105 @@ body {
   font-size: 20px;
 }
 
-.cadastroFuncionario {
-  width: 30%;
-  padding-left: 0px;
-  padding-right: 60vh;
-  margin-left: 27%;
-  background: #FFF;
-  font-family: 'Open Sans', sans-serif;
+
+.formcadfuncionario {
+  display: flex;
+  height: 100%;
+  width: 80%;
+  margin-left: 20%;
+  flex-direction: column;
+  align-items: center;
+  background: #f9f9f9;
 }
 
-.cadastroFuncionario h4{
-  margin-left: 15px;
+.formcontent {
+  width: 70%;
+  margin: auto;
+  margin-top: 30px; 
+  background: white;
+  padding: 15px;
+  padding-right: 8px ;    
 }
+
+
 
 .namecomplete h4 {
-  top: 100px;
+  margin: 25px 0px 5px 0px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .namecomplete input {
-  display: flex;
-  width: 117vh;
-  margin-left: 15px;
-  padding: 8px;  
+  width: 98%;
+  font-size: 16px;
+  border-radius: 3px;
+  padding: 10px 0px;
+  padding-left: 5px;
+  border-color: #a0a0a0;
+  border-style: solid;
+  border-width: 1px;  
 }
 
-.cpfdate {
+.flexinput {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 
 }
 
-.cpfdate input {
-  padding: 10px;
-  margin-left: 15px;
-  width: 55vh;
+.flexinput input {
+  width: 95%;
+  font-size: 16px;
+  border-radius: 3px;
+  padding: 10px 0px;
+  padding-left: 5px;
+  border-color: #a0a0a0;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.flexinput div{
+  width:100%;
+}
+
+.flexinput h4{
+  margin: 25px 0px 5px 0px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 
 .cargo h4 {
-  top: 100px;
+  margin: 25px 0px 5px 0px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .cargo input {
-  display: flex;
-  width: 117vh;
-  margin-left: 15px;
-  padding: 8px;  
+  width: 98%;
+  font-size: 16px;
+  border-radius: 3px;
+  padding: 10px 0px;
+  padding-left: 5px;
+  border-color: #a0a0a0;
+  border-style: solid;
+  border-width: 1px;  
 }
-
-
-.emailphone {
-  display: flex;
-  justify-content: space-between;
-
-}
-
-.emailphone input {
-  padding: 10px;
-  margin-left: 15px;
-  width: 55vh;
-}
-.codeState {
-  display: flex;
-  justify-content: space-between;
-
-}
-
-.codeState input {
-  padding: 10px;
-  margin-left: 15px;
-  width: 55vh;
-}
-
-
-.citystreet{
-  display: flex;
-  justify-content: space-between;
-}
-
-
-
-
-.citystreet input {
-  padding: 10px;
-  margin-left: 15px;
-  width: 55vh;
-}
-
-.numbercomplement{
-
-  display: flex;
-  justify-content: space-between;
-}
-
-
-.numbercomplement input{
-  padding: 10px;
-  margin-left: 15px;
-  width: 55vh;
-}
-
-.kits{
-  display: flex;
-  justify-content: space-between;
-}
-
-.kits input{
-  margin-top: 2px;
-  padding: 10px;
-  margin-left: 15px;
-  width: 55vh;
-}
-
-
 
 .btn{
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: center;
+  margin-left: 50%;
 }
 
 .btn button{
   margin-top: 30px;
   padding: 8px;
   margin-left: 15px;
-  width: 59vh;
+  width: 30vh;
   cursor: pointer;
-
+  justify-content: center;
 }
 
 

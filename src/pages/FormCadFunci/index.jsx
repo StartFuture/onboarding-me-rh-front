@@ -40,7 +40,15 @@ const FormsCadFunci = () => {
 
             <div className="cargo">
               <h4>Cargo</h4>
-              <input type="text" placeholder="Digite aqui" />
+              <input type="text" placeholder="Digite aqui" list="55"/>
+              <datalist id="55">
+                <option value="Analista"></option>
+                <option value="RH"></option>
+                <option value="Auxiliar"></option>
+                <option value="Adm"></option>
+                <option value="Gestor"></option>
+              </datalist>
+             
             </div>
 
             <div className="flexinput" >
@@ -63,14 +71,29 @@ const FormsCadFunci = () => {
 
               <div>
                 <h4>Estado</h4>
-                <input type="text" placeholder="Digite aqui" />
+                <input type="text" placeholder="Digite aqui" list="UF" />
+                <datalist id="UF">
+                <option value="São Paulo"></option>
+                <option value="Minas Gerais"></option>
+                <option value="Brasilia"></option>
+                <option value="Bahia"></option>
+                <option value="Rio Grande do Sul"></option>
+              </datalist>
+
               </div>
             </div>
 
             <div className="flexinput">
               <div>
                 <h4>Cidade</h4>
-                <input type="text" placeholder="Digite aqui" />
+                <input type="text" placeholder="Digite aqui" list="city" />
+                <datalist id="city">
+                <option value="Osasco"></option>
+                <option value="Barueri"></option>
+                <option value="São Paulo"></option>
+                <option value="Carapicuiba"></option>
+                <option value="Fransisco Morato"></option>
+              </datalist>
               </div>
 
               <div>
@@ -102,12 +125,25 @@ const FormsCadFunci = () => {
                 <h4>
                   kits
                 </h4>
-                <input type="text" placeholder="Selecione aqui" />
+                <input type="text" placeholder="Selecione aqui" list="kit" />
+                <datalist id="kit">
+                <option value="Kit-1"></option>
+                <option value="Kit-2"></option>
+                <option value="Kit-3"></option>
+                <option value="Kit-4"></option>
+                <option value="Kit-5"></option>
+              </datalist>
               </div>
 
               <div>
                 <h4>Status</h4>
-                <input type="text" placeholder="Selecione aqui" />
+                <input type="text" placeholder="Selecione aqui" list="status" />
+                <datalist id="status">
+                <option value="Entregue"></option>
+                <option value="Transportando"></option>
+                <option value="Não entregue"></option>
+                
+              </datalist>
               </div>
             </div>
 

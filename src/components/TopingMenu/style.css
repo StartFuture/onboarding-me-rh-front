@@ -1,0 +1,56 @@
+body, ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Open Sans';
+}
+
+a:hover {
+    background: rgba(0, 0, 0, .05)
+}
+
+.header {
+    background-color: #CE332D;
+    box-sizing: border-box;
+    height: 70px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 20px; 
+}
+
+.menu a {
+    display: block;
+    padding: 10px;
+}
+
+.btn-mobile {
+    display: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav a {
+    margin: 5px;
+}
+
+@media (max-width: 600px) {
+    .btn-mobile {
+        display: block;
+    }
+    .menu {
+        display: none;
+    }
+}

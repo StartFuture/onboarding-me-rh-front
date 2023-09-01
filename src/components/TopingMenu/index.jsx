@@ -1,4 +1,5 @@
 import "./style.css"
+import "./.js"
 
 function TopingMenu() {
   return <>

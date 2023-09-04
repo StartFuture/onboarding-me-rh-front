@@ -22,7 +22,7 @@ const FormsCadFunci = () => {
               </h4>
             </div>
 
-            <div className="namecomplete">
+            <div className="maior">
               <h4>Nome completo</h4>
               <input type="text" placeholder="Digite aqui" />
             </div>
@@ -38,7 +38,7 @@ const FormsCadFunci = () => {
               </div>
             </div>
 
-            <div className="cargo">
+            <div className="maior">
               <h4>Cargo</h4>
               <input type="text" placeholder="Digite aqui" list="55"/>
               <datalist id="55">

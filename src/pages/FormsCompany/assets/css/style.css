@@ -1,8 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 .conteudo {
   display: flex;
   flex-direction: row;
@@ -102,4 +97,21 @@ body {
 
 .send-soon {
   margin-top: 50px;
+}
+
+@media screen and (max-width:752px ) {
+  .form-container{
+    width: 100%;
+    margin-left: 0;
+    flex-direction: column;
+  }
+
+    .cnpj-container{
+      display: block; 
+    }
+
+    .cnpj-container div{
+      width: 100%;
+    }
+
 }

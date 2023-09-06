@@ -118,6 +118,11 @@ color: #CE332D;
 
 
 @media screen and (max-width:752px ) {
+
+  .formcadfuncionario{
+    width: 100%;
+    margin-left: 0;
+  }
   .flexinput{
     flex-direction: column;
   }

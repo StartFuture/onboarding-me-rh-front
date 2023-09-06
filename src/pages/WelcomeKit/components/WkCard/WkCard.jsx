@@ -1,12 +1,15 @@
 import "../../assets/css/style.css"
+import CardImage from "../../assets/images/imagem-card.jpg"
+import React from "react";
 
-const WkCard = () => {
+const WkCard = ({ kit }) => {
+
   return (
     <>
-      <div className="wk-card">
-        <img src="https://i.ibb.co/p2m8bkg/Frame-128.jpg" alt="Frame-128" />
-        <h4>Welcome Kit Diretores</h4>
-        <span><b>8</b> itens por kit</span>
+      <div key={kit.id} className="wk-card">
+        <img src={CardImage} alt="Imagem do Card" />
+        <h4> {kit.name} </h4>
+        <span>{kit.id}</span>
         <a href="/">Acessar Kit &gt;</a>
       </div>
     </>

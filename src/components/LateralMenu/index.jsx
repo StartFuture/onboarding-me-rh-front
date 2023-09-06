@@ -19,7 +19,7 @@ function LateralMenu() {
         </div>
         <div class="navigation-item">
           <img src={Funcionarios} alt="Employees Icon" />
-          <span>Funcionarios</span>
+          <span><strong>Funcionarios</strong></span>
         </div>
         <div class="navigation-item">
           <img src={WelcomeKits} alt="Welcome Kit Icon" />

@@ -1,5 +1,5 @@
 import "./style.css"
-import "./.js"
+// import "./.js"
 
 function TopingMenu() {
   return <>

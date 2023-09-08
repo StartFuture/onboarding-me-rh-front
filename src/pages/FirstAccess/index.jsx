@@ -1,5 +1,4 @@
 import "./assets/css/style.css";
-import SideBar from "../../components/SideBar";
 
 const FirstAccess = () => {
     return (

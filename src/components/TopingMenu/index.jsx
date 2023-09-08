@@ -21,7 +21,7 @@ function TopingMenu() {
           </button>
           <a>Funcionários</a>
           <ul class="menu">
-            <Link to="/form-access" style={{padding:"0px", margin:"0px"}}>
+            <Link to="/welcome" style={{padding:"0px", margin:"0px"}}>
               <li>
                 <img
                   class="img-dashboard"

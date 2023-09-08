@@ -1,5 +1,4 @@
 import "./assets/css/style.css";
-import SideBar from "../../components/SideBar";
 import WelcomeImage from "./assets/img/Celebration-amico (1).svg";
 import LogoOnboarding from "./assets/img/ME.svg";
 

@@ -1,5 +1,4 @@
 import "./assets/css/access.css";
-import SideBar from "../../components/SideBar";
 
 const FormAccess = () => {
   return (

@@ -6,7 +6,6 @@ import LogoOnboarding from "./assets/img/ME.svg";
 const Welcome = () => {
   return (
     <>
-      <SideBar />
       <div class="container-welcome">
         <div class="bar-mobile"></div>
         <div class="content-welcome">

@@ -4,7 +4,6 @@ import SideBar from "../../components/SideBar";
 const FormAccess = () => {
   return (
     <>
-      <SideBar />
       <div class="container-form">
       <div class="bar-mobile"></div>
         <div class="content-form">

@@ -4,8 +4,8 @@ import TopingMenu from "../../components/TopingMenu";
 const EmployeeListing = () => {
     return (
       <>
-        <LateralMenu/>
-        {/* <TopingMenu/> */}
+        {/* <LateralMenu/> */}
+        <TopingMenu/>
 </>
   );
 };

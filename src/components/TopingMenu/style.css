@@ -51,10 +51,6 @@ a:hover {
   margin: 5px;
 }
 
-.img-dashboard {
-  fill: #fff;
-  stroke: white;
-}
 
 @media (max-width: 600px) {
   .menu {
@@ -64,7 +60,7 @@ a:hover {
     height: calc(100vh - 70px);
     top: 70px;
     right: 0px;
-    background: #302c2c;
+    background: #ce332d;
     z-index: 1000;
   }
 

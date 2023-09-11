@@ -4,6 +4,7 @@ import Welcome from "./pages/Welcome";
 import FormAccess from "./pages/FormAccess";
 import FirstAccess from "./pages/FirstAccess";
 import EmployeeListing from "./pages/EmployeeListing";
+import LoginForm from "./pages/LoginForm";
 
 
 const AppRoutes = () => {
@@ -15,6 +16,7 @@ const AppRoutes = () => {
         <Route path="/form-access" element={<FormAccess/>} />
         <Route path="/first-access" element={<FirstAccess/>} />
         <Route path="/employee-listing" element={<EmployeeListing/>} />
+        <Route path="/login-form" element={<LoginForm/>} />
       </Routes>
     </BrowserRouter>
   );

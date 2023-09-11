@@ -1,0 +1,35 @@
+body {
+  display: inline;
+}
+
+.full-container {
+  display: inline;
+}
+
+.logo {
+  margin: 0;
+  padding: 0;
+  width: 10%;
+  height: 4%;
+}
+
+.container-form {
+  display: inline-block;
+  width: 40%;
+  height: 100%;
+}
+
+.forget-button {
+  margin: 0px;
+  padding: 0px;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  color: red;
+}
+
+img {
+  width: 60%;
+  height: 100vh;
+  background-color: #f0f0f0;
+}

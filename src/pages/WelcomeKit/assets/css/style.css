@@ -140,6 +140,31 @@ body {
     padding-bottom: 30px;
     font-weight: 600;
   }
+
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .page-button {
+    background-color: #CE332D;
+    color: #FFFFFF;
+    border-radius: 4px;
+    width: 10%;
+    height: 25px;
+    border: none;
+    margin-left: 3px;
+    margin-right: 3px;
+    padding: 14px, 16px, 14px, 16px;
+    font-family: Open Sans;
+    font-weight: 600;
+  }
+
+  .page-button:disabled {
+    background-color: #A0A0A0;
+  }
   
   @media (max-width: 650px) {
 

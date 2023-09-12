@@ -17,7 +17,7 @@ const WelcomeKit = () => {
   const getPaginatedKits = async (page) => {
     await api.get(`/getall-wk-paginated/?page=${page}`)
       .then((res) => setKits(res.data)
-      ).catch ((err) => {
+      ).catch((err) => {
         console.log(err)
       });
   }
@@ -30,7 +30,7 @@ const WelcomeKit = () => {
     setKits(searchedKits);
 
     const searchbar = document.getElementById('search-bar');
-    if(searchbar.value.length === 0) {
+    if (searchbar.value.length === 0) {
       getPaginatedKits(actualPage)
     }
   }, [actualPage]);
@@ -39,7 +39,7 @@ const WelcomeKit = () => {
   const getKits = async () => {
     await api.get(`/getall-welcome-kit/`)
       .then((res) => setTotalKits(res.data)
-      ).catch ((err) => {
+      ).catch((err) => {
         console.log(err)
       });
   }
@@ -68,18 +68,18 @@ const WelcomeKit = () => {
           <span>Você não tem kits cadastrados. Cadastre clicando no botão abaixo.</span>
           <button className="add-button-desktop">Adicionar Kit</button>
         </div>
-      <div className="pagination">
-        <button className="page-button" onClick={() => setActualPage(actualPage - 1)}
-        disabled={actualPage <= 1}
-        >
-        &lt;
-        </button>
-        <button className="page-button" onClick={() => setActualPage(actualPage + 1)}
-        disabled={actualPage >= totalPageCount}
-        >
-        &gt;
-        </button>
-      </div>
+        <div className="pagination">
+          <button className="page-button" onClick={() => setActualPage(actualPage - 1)}
+            disabled={actualPage <= 1}
+          >
+            &lt;
+          </button>
+          <button className="page-button" onClick={() => setActualPage(actualPage + 1)}
+            disabled={actualPage >= totalPageCount}
+          >
+            &gt;
+          </button>
+        </div>
       </div>
       <div className="add-button-container">
         <button className="add-button-mobile">Adicionar Kit</button>

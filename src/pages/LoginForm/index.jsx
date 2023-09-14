@@ -6,7 +6,7 @@ const LoginForm = () => {
   return (
     <>
       <div class="full-container">
-        <img src={GradientImg} alt="" />
+        <img class="gradient" src={GradientImg} alt="" />
         <div class="container-form">
           <form>
           <img class="logo" src={Logo} alt="" />

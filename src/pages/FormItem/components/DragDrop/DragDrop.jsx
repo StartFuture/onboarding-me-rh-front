@@ -47,7 +47,6 @@ const DragDrop = () => {
   };
 
   const handleRemoveImage = (e) => {
-    console.log(image);
     setImage(null);
     setPreview(Upload);
   };
@@ -72,7 +71,7 @@ const DragDrop = () => {
         <label htmlFor="input-file-upload" className={dragActive ? "drag-active" : ""}>
           <div>
             <img src={preview} alt="enviar logo da empresa" />
-            <span>Clique ou arraste a capa do seu kit</span>
+            <span>Clique ou arraste a imagem do item</span>
           </div>
         </label>
         {dragActive && <div id="drag-file-element" onDragEnter={handleDrag} onDragLeave={handleDrag} onDragOver={handleDrag} onDrop={handleDrop}></div>}

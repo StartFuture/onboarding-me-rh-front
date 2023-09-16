@@ -1,28 +1,40 @@
+import "./assets/css/style.css";
 import LateralMenu from "../../components/LateralMenu";
-import TopingMenu from "../../components/TopingMenu";
+// import TopingMenu from "../../components/TopingMenu";
+// import Edit from "./assets/img/Edit.svg";
 
 const EmployeeListing = () => {
-    return (
-      <>
+  
+  return (
+    <>
+      <div class="full-div">
         <LateralMenu/>
-        {/* <TopingMenu/> */}
-                <table>
-                  <thead>
-                    <th>Nome</th>
-                    <th>CPF</th>
-                    <th>E-mail</th>
-                    <th>Cargo</th>
-                    <th>Welcomekit</th>
-                  </thead>
-                  <tbody>
-                    <td data-title="Nome"></td>
-                    <td data-title="CPF"></td>
-                    <td data-title="E-mail"></td>
-                    <td data-title="Cargo"></td>
-                    <td data-title="Welcomekit"></td>
-                  </tbody>
-                </table>
-</>
+        <div class="container-table">
+          <div class="search-div">
+            <input type="text"/>
+            <button>Adicionar Funcionário</button>
+          </div>
+          <div class="table-div">
+            <table>
+              <thead>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>E-mail</th>
+                <th>Cargo</th>
+                <th>Welcomekit</th>
+              </thead>
+              <tbody>
+                <td data-title="Nome">Marcelo Henrique Santos</td>
+                <td data-title="CPF">555.555.555-55</td>
+                <td data-title="E-mail">marcelo.henriquee@gmail.com</td>
+                <td data-title="Cargo">Diretor</td>
+                <td data-title="Welcomekit">Enviado</td>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

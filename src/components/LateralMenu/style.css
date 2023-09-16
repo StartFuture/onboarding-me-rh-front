@@ -18,16 +18,13 @@ strong {
 }
 
 .logo {
-  display: block;
-  padding: 140px 60px;
-  padding-bottom: 80px;
-  margin-bottom: 20px;
-  text-align: center;
+  min-width: 250px; 
+  height: 100px;
+  background: url("../../assets/img/LogoUber.png") no-repeat center;
 }
 
-.logo img {
-  width: 100%;
-  height: auto;
+.navigation-div {
+  padding-bottom: 60px;
 }
 
 .navigation-item {

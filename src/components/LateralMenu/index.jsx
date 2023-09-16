@@ -1,4 +1,3 @@
-import LogoMenu from "../../assets/img/LogoUber.png";
 import Dashboard from "../../assets/img/Dashboard.svg";
 import Funcionarios from "../../assets/img/Funcionários.svg";
 import WelcomeKits from "../../assets/img/Welcomekit.svg";
@@ -11,9 +10,8 @@ function LateralMenu() {
     <>
       <div class="container-menu">
         <div class="logo">
-          <img src={LogoMenu} alt="Logo" />
         </div>
-        <div>
+        <div class="navigation-div">
           <div class="navigation-item">
             <img src={Dashboard} alt="Dashboard Icon" />
             <span>Dashboard</span>

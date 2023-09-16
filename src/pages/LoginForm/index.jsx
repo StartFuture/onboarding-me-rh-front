@@ -1,12 +1,12 @@
 import "./assets/css/style.css";
-import GradientImg from "./assets/img/gradientimg.png";
+import GradientImg from "./assets/img/Frame 14.png";
 import Logo from "./assets/img/Logo (1).svg";
 
 const LoginForm = () => {
   return (
     <>
       <div class="full-container">
-        <img class="gradient" src={GradientImg} alt="" />
+        <img src={GradientImg} alt="" />
         <div class="container-form">
           <form>
           <img class="logo" src={Logo} alt="" />

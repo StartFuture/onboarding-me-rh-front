@@ -2,8 +2,9 @@ body {
   display: inline;
 }
 
-.full-container {
-  display: inline;
+.full-container{
+  display: flex;
+  height: 100vh;
 }
 
 .logo {
@@ -57,8 +58,8 @@ form {
 }
 
 .gradient {
+  background-size: contain;
   width: 55%;
-  height: 100vh;
   background-color: #f0f0f0;
 }
 

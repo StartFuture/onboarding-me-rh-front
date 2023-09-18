@@ -2,6 +2,7 @@ import "../../assets/css/style.css"
 import DragDrop from "../DragDrop/DragDrop";
 import { useState, useEffect } from "react";
 import api from "../../services/api";
+import TopingMenu from "../../../../components/TopingMenu";
 
 const Form = () => {
 
@@ -39,6 +40,11 @@ const Form = () => {
   return (
     <div className="form-container-item">
 
+<div className="container-topmenu">
+
+<TopingMenu />
+</div>
+
       <div className="kit-container-item">
 
         <form className="company-form" >
@@ -55,12 +61,6 @@ const Form = () => {
                 placeholder="Digite aqui" 
                 onChange={(e) => setName(e.target.value)}
                 />
-            </div>
-            <div className="inputs">
-
-              <h4>Quantidade no kit *</h4>
-              <input type="text"
-                placeholder="Digite aqui" />
             </div>
           </div>
 

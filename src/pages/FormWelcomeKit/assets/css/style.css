@@ -7,11 +7,15 @@ body {
   font-family: Open Sans;
 }
 
+.container-page {
+  display: flex;
+}
+
 .form-container-wk {
   display: flex;
   height: 100%;
   width: 80%;
-  margin-left: 20%;
+  margin-left: auto;
   flex-direction: column;
   align-items: center;
   background: #f9f9f9;
@@ -157,6 +161,11 @@ body {
 
 @media (max-width: 650px) {
 
+  .container-page {
+    display: flex;
+    flex-direction: column;
+  }
+
   .form-container-wk {
     width: 100% !important;
     margin-left: 0px;
@@ -191,5 +200,11 @@ body {
 
   .items button {
     width: 40%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .form-container-wk {
+    width: 100%;
   }
 }

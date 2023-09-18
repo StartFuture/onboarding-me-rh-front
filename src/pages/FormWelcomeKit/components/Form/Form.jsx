@@ -3,6 +3,7 @@ import DragDrop from "../DragDrop/DragDrop";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"
 import api from "../../services/api";
+import TopingMenu from "../../../../components/TopingMenu/index"
 
 const Form = () => {
 
@@ -46,7 +47,7 @@ const Form = () => {
     <div className="form-container-wk">
 
       <div className="kit-container-wk">
-
+        <TopingMenu />
         <div className="kit-title">
           <h4>Kit</h4>
         </div>

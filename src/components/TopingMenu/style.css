@@ -51,8 +51,13 @@ a:hover {
   margin: 5px;
 }
 
+@media (min-width: 1001px) {
+  .header {
+    display: none;
+  }
+}
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .menu {
     display: none;
     position: absolute;

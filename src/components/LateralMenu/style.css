@@ -77,3 +77,9 @@ strong {
   flex-direction: column;
   margin: auto 0px;
 }
+
+@media (max-width: 1000px) {
+  .container-menu{
+    display: none;
+  }
+}

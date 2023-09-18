@@ -6,12 +6,14 @@ import FirstAccess from "./pages/FirstAccess";
 import WelcomeKit from "./pages/WelcomeKit";
 import FormWelcomeKit from "./pages/FormWelcomeKit";
 import FormItem from "./pages/FormItem";
+import LoginForm from "./pages/LoginForm";
 import FormsCadFunci from "./pages/FormCadFunci";
 
 const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<LoginForm/>} />
         <Route path="/forms-company" element={<FormsCompany/>} />
         <Route path="/welcome" element={<Welcome/>} />
         <Route path="/form-access" element={<FormAccess/>} />
@@ -19,6 +21,7 @@ const AppRoutes = () => {
         <Route path="/welcome-kit" element={<WelcomeKit/>} />
         <Route path="/form-welcome-kit" element={<FormWelcomeKit/>} />
         <Route path="/form-item" element={<FormItem/>} />
+        <Route path="/employee-listing" element={<EmployeeListing/>} />
         <Route path="/forms-cadfuncionario" element={<FormsCadFunci/>} />
       </Routes>
     </BrowserRouter>

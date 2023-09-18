@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import api from "../../services/api";
 
 const SearchBar = (props) => {
-
+  
   const [input, setInput] = useState("");
   const navigate = useNavigate();
 
@@ -27,12 +27,10 @@ const SearchBar = (props) => {
     setInput(value)
   }
 
-
   const toWKForm = () => {
     navigate('/form-welcome-kit');
   };
-
-
+  
   return (
     <>
       <div className="content-search">

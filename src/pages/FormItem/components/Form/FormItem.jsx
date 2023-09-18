@@ -2,6 +2,7 @@ import "../../assets/css/style.css"
 import DragDrop from "../DragDrop/DragDrop";
 import { useState, useEffect } from "react";
 import api from "../../services/api";
+import TopingMenu from "../../../../components/TopingMenu";
 
 const Form = () => {
 
@@ -38,6 +39,11 @@ const Form = () => {
 
   return (
     <div className="form-container-item">
+
+<div className="container-topmenu">
+
+<TopingMenu />
+</div>
 
       <div className="kit-container-item">
 

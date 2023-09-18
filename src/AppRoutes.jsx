@@ -4,7 +4,7 @@ import Welcome from "./pages/Welcome";
 import FormAccess from "./pages/FormAccess";
 import FirstAccess from "./pages/FirstAccess";
 import WelcomeKit from "./pages/WelcomeKit";
-
+import FormsCadFunci from "./pages/FormCadFunci";
 
 const AppRoutes = () => {
   return (
@@ -15,6 +15,7 @@ const AppRoutes = () => {
         <Route path="/form-access" element={<FormAccess/>} />
         <Route path="/first-access" element={<FirstAccess/>} />
         <Route path="/welcome-kit" element={<WelcomeKit/>} />
+        <Route path="/forms-cadfuncionario" element={<FormsCadFunci/>} />
       </Routes>
     </BrowserRouter>
   );

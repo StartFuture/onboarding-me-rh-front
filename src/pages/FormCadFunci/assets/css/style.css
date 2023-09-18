@@ -1,0 +1,137 @@
+.titleCad h4 {
+  height: 100%;
+  width: 80%;
+  color: #000;
+  font-family: Open Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+.formcadfuncionario {
+  display: flex;
+  height: 100%;
+  width: 80%;
+  margin-left: 20%;
+  flex-direction: column;
+  align-items: center;
+  background: #f9f9f9;
+  color: var(--gray-100, #2E2E2E);
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.formcontent {
+  width: 70%;
+  margin: auto;
+  margin-top: 30px;
+  background: white;
+  padding: 15px;
+  padding-right: 8px;
+}
+
+
+
+.maior h4 {
+  margin: 25px 0px 5px 0px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.maior input {
+  width: 98%;
+  font-size: 16px;
+  border-radius: 3px;
+  padding: 10px 0px;
+  padding-left: 5px;
+  border-color: #a0a0a0;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.flexinput {
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 10px;
+
+}
+
+.flexinput input {
+  width: 95%;
+  font-size: 16px;
+  border-radius: 3px;
+  padding: 10px 0px;
+  padding-left: 5px;
+  border-color: #a0a0a0;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.flexinput div {
+  width: 100%;
+}
+
+.flexinput h4 {
+  margin: 25px 0px 5px 0px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+.btn {
+  display: flex;
+  width: 98%;
+  justify-content: center;
+  padding-top: 50px;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn button {
+  width: 125px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  gap: 8px;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.btn-salvar {
+  background: var(--primary, #CE332D);
+   color: var(--white, #FFF);
+}
+
+.btn-cancelar{
+border: 1px solid var(--primary, #CE332D);
+background: var(--white, #FFF);
+color: #CE332D;
+}
+
+
+@media screen and (max-width:752px ) {
+
+  .formcadfuncionario{
+    width: 100%;
+    margin-left: 0;
+  }
+  .flexinput{
+    flex-direction: column;
+  }
+
+  .flexinput input{
+    width: 98%;
+  }
+ 
+  .btn button{
+    font-size: 12px;
+  }
+}

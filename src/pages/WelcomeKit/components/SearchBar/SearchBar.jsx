@@ -13,7 +13,7 @@ const SearchBar = (props) => {
       .then((res) => props.handleChange(res.data)
       ).catch ((err) => {
         console.log(err)
-        if (err.response.statusText === "Not Found") {
+        if (err?.response?.statusText === "Not Found") {
           alert("Nenhum kit encontrado")
         }
       });

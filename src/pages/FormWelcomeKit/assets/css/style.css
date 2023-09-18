@@ -11,6 +11,7 @@ body {
   display: flex;
 }
 
+
 .form-container-wk {
   display: flex;
   height: 100%;
@@ -166,6 +167,10 @@ body {
     flex-direction: column;
   }
 
+  .container-topmenu {
+    width: 100%;
+  }
+
   .form-container-wk {
     width: 100% !important;
     margin-left: 0px;
@@ -205,6 +210,10 @@ body {
 
 @media (max-width: 1000px) {
   .form-container-wk {
+    width: 100%;
+  }
+
+  .container-topmenu {
     width: 100%;
   }
 }

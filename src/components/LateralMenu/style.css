@@ -1,0 +1,85 @@
+body {
+  background-color: rgb(228, 223, 227);
+}
+
+strong {
+  color: red;
+  font-style: none;
+}
+
+.container-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20%;
+  height: 100vh;
+  background-color: #f1eeee;
+  border-right: 1px solid #d9d9d9;
+}
+
+.logo {
+  min-width: 250px; 
+  height: 100px;
+  background: url("../../assets/img/LogoUber.png") no-repeat center;
+}
+
+.navigation-div {
+  padding-bottom: 60px;
+}
+
+.navigation-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d9d9d9;
+  padding-bottom: 20px;
+}
+
+.navigation-item img {
+  width: 47px;
+  height: 47px;
+  margin-right: 10px;
+  margin-left: 16px;
+}
+
+.footer-perfil {
+  display: flex;
+  border-top: 1px solid #d9d9d9;
+  width: 100%;
+  height: 90px;
+  background-color: #fff;
+}
+
+.footer-perfil img {
+  margin: auto 5px;
+  width: 48px;
+  height: 48px;
+}
+
+.footer-perfil button {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.footer-perfil button:hover {
+  text-decoration: underline;
+}
+
+.footer-perfil span {
+  margin-top: 0;
+  padding: 0;
+}
+
+.footer-perfil div {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin: auto 0px;
+}
+
+@media (max-width: 1000px) {
+  .container-menu{
+    display: none;
+  }
+}

@@ -62,12 +62,6 @@ const Form = () => {
                 onChange={(e) => setName(e.target.value)}
                 />
             </div>
-            <div className="inputs">
-
-              <h4>Quantidade no kit *</h4>
-              <input type="text"
-                placeholder="Digite aqui" />
-            </div>
           </div>
 
           <div className="buttons">

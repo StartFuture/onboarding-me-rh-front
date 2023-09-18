@@ -5,7 +5,7 @@ import FormAccess from "./pages/FormAccess";
 import FirstAccess from "./pages/FirstAccess";
 import EmployeeListing from "./pages/EmployeeListing";
 import LoginForm from "./pages/LoginForm";
-
+import FormsCadFunci from "./pages/FormCadFunci";
 
 const AppRoutes = () => {
   return (
@@ -17,6 +17,8 @@ const AppRoutes = () => {
         <Route path="/first-access" element={<FirstAccess/>} />
         <Route path="/employee-listing" element={<EmployeeListing/>} />
         <Route path="/login-form" element={<LoginForm/>} />
+        <Route path="/welcome-kit" element={<WelcomeKit/>} />
+        <Route path="/forms-cadfuncionario" element={<FormsCadFunci/>} />
       </Routes>
     </BrowserRouter>
   );

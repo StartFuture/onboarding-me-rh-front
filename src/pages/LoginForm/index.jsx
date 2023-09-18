@@ -8,20 +8,20 @@ const LoginForm = () => {
       <div class="full-container">
         <img src={GradientImg} alt="" />
         <div class="container-form">
-          <form>
-          <img class="logo" src={Logo} alt="" />
+          <form class="login-logo">
+            <img src={Logo} alt="" />
             <h4>E-mail</h4>
             <input type="text" placeholder="Digite aqui" />
             <h4>Senha</h4>
             <input type="text" placeholder="Digite aqui" />
             <button class="forget-button">Esqueci minha senha</button>
-          <button class="next-button">Prosseguir</button>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque rem
-            voluptates fuga odio vero cupiditate voluptas accusantium laudantium
-            voluptatum facilis temporibus praesentium neque ducimus libero,
-            distinctio totam possimus sit obcaecati.
-          </p>
+            <button class="next-button">Prosseguir</button>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque rem
+              voluptates fuga odio vero cupiditate voluptas accusantium laudantium
+              voluptatum facilis temporibus praesentium neque ducimus libero,
+              distinctio totam possimus sit obcaecati.
+            </p>
           </form>
         </div>
       </div>

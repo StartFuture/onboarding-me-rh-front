@@ -1,7 +1,5 @@
 import "./assets/css/style.css";
 import LateralMenu from "../../components/LateralMenu";
-// import TopingMenu from "../../components/TopingMenu";
-// import Edit from "./assets/img/Edit.svg";
 
 const EmployeeListing = () => {
   

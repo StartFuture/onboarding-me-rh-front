@@ -8,6 +8,7 @@ import FormWelcomeKit from "./pages/FormWelcomeKit";
 import FormItem from "./pages/FormItem";
 import LoginForm from "./pages/LoginForm";
 import FormsCadFunci from "./pages/FormCadFunci";
+import EmployeeListing from "./pages/EmployeeListing";
 
 const AppRoutes = () => {
   return (

@@ -7,7 +7,6 @@ import WelcomeKit from "./pages/WelcomeKit";
 import FormWelcomeKit from "./pages/FormWelcomeKit";
 import FormItem from "./pages/FormItem";
 
-
 const AppRoutes = () => {
   return (
     <BrowserRouter>

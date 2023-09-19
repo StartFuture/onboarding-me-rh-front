@@ -4,6 +4,9 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"
 import api from "../../services/api";
 import TopingMenu from "../../../../components/TopingMenu/index"
+import Modal from "../Modal/Modal";
+import RedTrashIcon from '../../../../assets/img/red-trash-icon.svg'
+import ItemImage from '../../assets/img/image5.png'
 
 const Form = () => {
 
@@ -11,6 +14,7 @@ const Form = () => {
 
   const [image, setImage] = useState();
   const [name, setName] = useState();
+  const [modal, setModal] = useState(false);
 
   const createKit = async (e) => {
     e.preventDefault()
@@ -22,7 +26,8 @@ const Form = () => {
       console.error(err);
     })
 
-    navigate("/welcome-kit");
+    setModal(true)
+
   }
 
   useEffect(() => {
@@ -39,6 +44,7 @@ const Form = () => {
     }
   }, [image])
 
+  
   const toItemForm = () => {
     navigate('/form-item');
   };
@@ -46,20 +52,23 @@ const Form = () => {
   return (
     <div className="form-container-wk">
 
-        <div className="container-topmenu">
+      <div className="container-topmenu">
 
         <TopingMenu />
-        </div>
+      </div>
       <div className="kit-container-wk">
         <div className="kit-title">
           <h4>Kit</h4>
         </div>
-
+        <div>
+          {modal && <Modal />}
+        </div>
         <form className="company-form" >
           <h4>Nome do kit *</h4>
           <input type="text"
             placeholder="Digite aqui"
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => setName(e.target.value)
+            }
           />
 
           <div className="send-soon">
@@ -74,11 +83,23 @@ const Form = () => {
             <span>Itens</span>
             <button onClick={toItemForm}>Adicionar Itens</button>
           </div>
-          <div className="no-items">
-            <span>Você não tem itens cadastrados no seu kit.</span>
+          <div className="itemContainer">
+            <div className="itemWK">
+              <div className="itemImage">
+                <img src={ItemImage} alt="imagem do item" />
+              </div>
+              <p>Item teste</p>
+            </div>
+            <div className="removeItem">
+              <img src={RedTrashIcon} alt="" />
+            </div>
+
           </div>
+          {/* <div className="no-items">
+            <span>Você não tem itens cadastrados no seu kit.</span>
+          </div> */}
           <div className="buttons">
-            <button type="submit" className="cancel-button" onclick="this.form.reset();">Cancelar</button>
+            <button className="cancel-button" onClick={() => window.location.reload(true)} >Cancelar</button>
             <button type="submit" className="save-button" onClick={(e) => createKit(e)} >Salvar</button>
           </div>
         </form>

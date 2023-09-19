@@ -3,11 +3,13 @@ import DragDrop from "../DragDrop/DragDrop";
 import { useState, useEffect } from "react";
 import api from "../../services/api";
 import TopingMenu from "../../../../components/TopingMenu";
+import Modal from "../Modal/Modal";
 
 const Form = () => {
 
   const [image, setImage] = useState();
   const [name, setName] = useState();
+  const [modal, setModal] = useState(false);
 
   const createItem = async (e) => {
     e.preventDefault()
@@ -19,8 +21,7 @@ const Form = () => {
       console.error(err);
     })
 
-    alert("Item Cadastrado com Sucesso");
-    window.location.reload()
+    setModal(true)
   }
 
   useEffect(() => {
@@ -40,12 +41,15 @@ const Form = () => {
   return (
     <div className="form-container-item">
 
-<div className="container-topmenu">
+      <div className="container-topmenu">
 
-<TopingMenu />
-</div>
+        <TopingMenu />
+      </div>
 
       <div className="kit-container-item">
+        <div>
+          {modal && <Modal />}
+        </div>
 
         <form className="company-form" >
 
@@ -58,15 +62,15 @@ const Form = () => {
             <div className="inputs">
               <h4>Nome do item *</h4>
               <input type="text"
-                placeholder="Digite aqui" 
+                placeholder="Digite aqui"
                 onChange={(e) => setName(e.target.value)}
-                />
+              />
             </div>
           </div>
 
           <div className="buttons">
-          <button type="submit" className="cancel-button" onclick="this.form.reset();">Cancelar</button>
-          <button type="submit" className="save-button" onClick={(e) => createItem(e)}>Salvar</button>
+            <button className="cancel-button" onClick={() => window.location.reload(true)}>Cancelar</button>
+            <button type="submit" className="save-button" onClick={(e) => createItem(e)}>Salvar</button>
           </div>
         </form>
       </div>

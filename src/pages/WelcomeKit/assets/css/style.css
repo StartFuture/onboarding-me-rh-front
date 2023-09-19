@@ -53,6 +53,7 @@ body {
     padding: 14px, 16px, 14px, 16px;
     font-family: Open Sans;
     font-weight: 600;
+    cursor: pointer;
   }
   
   .add-button:hover {
@@ -98,6 +99,7 @@ body {
     height: 50px;
     margin-top: 24px;
     margin-bottom: 24px;
+    cursor: pointer;
   }
 
   .wk-card {
@@ -164,10 +166,12 @@ body {
     padding: 14px, 16px, 14px, 16px;
     font-family: Open Sans;
     font-weight: 600;
+    cursor: pointer;
   }
 
   .page-button:disabled {
     background-color: #A0A0A0;
+    cursor:default;
   }
   
   @media (max-width: 650px) {

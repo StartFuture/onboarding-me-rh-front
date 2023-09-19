@@ -1,17 +1,34 @@
 import "../FormCadFunci/assets/css/style.css";
 import Timeline from "../../components/TimeLine";
-
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const FormsCadFunci = () => {
+  const [cep, setCep] = useState("");
+  const [cepBody, setCepBody] = useState({});
+
+  useEffect(() => {
+    const cepOnlyNumbers = cep.replace(/[^0-9]/g,'');
+    if (cepOnlyNumbers.length === 8) {
+      axios({
+        method: "GET",
+        url: `https://viacep.com.br/ws/${cepOnlyNumbers}/json/`,
+      })
+      .then((response) => {
+        if (!response.data.erro) {
+          setCepBody(response.data)
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    }
+  }, [cep])
+
   return (
-
     <>
-
       <div className="conteudo">
         <Timeline />
-
-
-
         <div className="formcadfuncionario">
 
           <form className="formcontent">
@@ -48,7 +65,7 @@ const FormsCadFunci = () => {
                 <option value="Adm"></option>
                 <option value="Gestor"></option>
               </datalist>
-             
+
             </div>
 
             <div className="flexinput" >
@@ -66,39 +83,24 @@ const FormsCadFunci = () => {
             <div className="flexinput">
               <div>
                 <h4>CEP</h4>
-                <input type="text" placeholder="Digite aqui" />
+                <input type="text" placeholder="Digite aqui" onChange={(event) => setCep(event.target.value)} />
               </div>
 
               <div>
                 <h4>Estado</h4>
-                <input type="text" placeholder="Digite aqui" list="UF" />
-                <datalist id="UF">
-                <option value="São Paulo"></option>
-                <option value="Minas Gerais"></option>
-                <option value="Brasilia"></option>
-                <option value="Bahia"></option>
-                <option value="Rio Grande do Sul"></option>
-              </datalist>
-
+                <input type="text" placeholder="Digite aqui" defaultValue={cepBody.uf} />
               </div>
             </div>
 
             <div className="flexinput">
               <div>
                 <h4>Cidade</h4>
-                <input type="text" placeholder="Digite aqui" list="city" />
-                <datalist id="city">
-                <option value="Osasco"></option>
-                <option value="Barueri"></option>
-                <option value="São Paulo"></option>
-                <option value="Carapicuiba"></option>
-                <option value="Fransisco Morato"></option>
-              </datalist>
+                <input type="text" placeholder="Digite aqui" defaultValue={cepBody.localidade} />
               </div>
 
               <div>
                 <h4>Rua</h4>
-                <input type="text" placeholder="Digite aqui" />
+                <input type="text" placeholder="Digite aqui" defaultValue={cepBody.logradouro} />
               </div>
             </div>
 
@@ -127,23 +129,23 @@ const FormsCadFunci = () => {
                 </h4>
                 <input type="text" placeholder="Selecione aqui" list="kit" />
                 <datalist id="kit">
-                <option value="Kit-1"></option>
-                <option value="Kit-2"></option>
-                <option value="Kit-3"></option>
-                <option value="Kit-4"></option>
-                <option value="Kit-5"></option>
-              </datalist>
+                  <option value="Kit-1"></option>
+                  <option value="Kit-2"></option>
+                  <option value="Kit-3"></option>
+                  <option value="Kit-4"></option>
+                  <option value="Kit-5"></option>
+                </datalist>
               </div>
 
               <div>
                 <h4>Status</h4>
                 <input type="text" placeholder="Selecione aqui" list="status" />
                 <datalist id="status">
-                <option value="Entregue"></option>
-                <option value="Transportando"></option>
-                <option value="Não entregue"></option>
-                
-              </datalist>
+                  <option value="Entregue"></option>
+                  <option value="Transportando"></option>
+                  <option value="Não entregue"></option>
+
+                </datalist>
               </div>
             </div>
 

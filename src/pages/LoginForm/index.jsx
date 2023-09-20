@@ -13,6 +13,7 @@ const LoginForm = () => {
           src={GradientImgMobile}
           alt="Imagem de uma mulher sorrindo"
         />
+        <p>Crie o onboarding perfeito para sua empresa</p>
         <div class="container-form">
           <form class="login-logo">
             <img src={Logo} alt="" />

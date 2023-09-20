@@ -9,7 +9,7 @@
 }
 
 .search-div button {
-  width: 20%;
+  width: 21%;
   height: 55px;
   border-radius: 3px;
   border: none;
@@ -20,7 +20,8 @@
 .container-table {
   width: 100%;
   height: 100%;
-  margin: 50px 100px;
+  margin-left: 20%;
+  padding: 25px 50px;
 }
 
 .table-div thead {
@@ -28,6 +29,7 @@
 }
 
 .table-div table {
+  text-align: left;
   background-color: white;
   margin-top: 30px;
   width: 100%;
@@ -36,5 +38,5 @@
 }
 
 .table-div hr {
-  width: 380%;
+  width: 475%;
 }

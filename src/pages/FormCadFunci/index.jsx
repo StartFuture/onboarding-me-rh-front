@@ -1,5 +1,5 @@
 import "../FormCadFunci/assets/css/style.css";
-import Timeline from "../../components/TimeLine";
+import LateralMenu from "../../components/LateralMenu";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -28,7 +28,7 @@ const FormsCadFunci = () => {
   return (
     <>
       <div className="conteudo">
-        <Timeline />
+        <LateralMenu />
         <div className="formcadfuncionario">
 
           <form className="formcontent">

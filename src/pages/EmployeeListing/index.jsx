@@ -21,7 +21,14 @@ const EmployeeListing = () => {
       cpf: "111.111.111-11",
       status: "Pendente",
     },
-    
+    {
+      first_name: "Beatriz",
+      surname: "Andrade",
+      employee_role: "CEO",
+      email: "beatriz.andraddee@gmail.com",
+      cpf: "222.222.222-22",
+      status: "A enviar",
+    },
   ]);
 
   return (

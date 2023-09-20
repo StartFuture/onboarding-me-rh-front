@@ -1,15 +1,36 @@
 import "./assets/css/style.css";
+import Edit from "./assets/img/Edit.svg";
 import LateralMenu from "../../components/LateralMenu";
+import { useState } from "react";
 
 const EmployeeListing = () => {
-  
+  const [listaFuncionarios, setListaFuncionario] = useState([
+    {
+      first_name: "Marcelo",
+      surname: "Henrique",
+      employee_role: "Diretor",
+      email: "marcelo.henriquee@gmail.com",
+      cpf: "555.555.555-55",
+      status: "Enviado",
+    },
+    {
+      first_name: "Bruno",
+      surname: "Bergamasco",
+      employee_role: "Diretor",
+      email: "bruno.berga@gmail.com",
+      cpf: "111.111.111-11",
+      status: "Pendente",
+    },
+    
+  ]);
+
   return (
     <>
       <div class="full-div">
-        <LateralMenu/>
+        <LateralMenu />
         <div class="container-table">
           <div class="search-div">
-            <input type="text"/>
+            <input type="text" />
             <button>Adicionar Funcionário</button>
           </div>
           <div class="table-div">
@@ -20,14 +41,21 @@ const EmployeeListing = () => {
                 <th>E-mail</th>
                 <th>Cargo</th>
                 <th>Welcomekit</th>
+                <th></th>
               </thead>
-              <tbody>
-                <td data-title="Nome">Marcelo Henrique Santos</td>
-                <td data-title="CPF">555.555.555-55</td>
-                <td data-title="E-mail">marcelo.henriquee@gmail.com</td>
-                <td data-title="Cargo">Diretor</td>
-                <td data-title="Welcomekit">Enviado</td>
-              </tbody>
+              <hr />
+              {listaFuncionarios.map((funcionario) => (
+                <tbody>
+                  <td data-title="Nome">{funcionario.first_name + " " + funcionario.surname}</td>
+                  <td data-title="CPF">{funcionario.cpf}</td>
+                  <td data-title="E-mail">{funcionario.email}</td>
+                  <td data-title="Cargo">{funcionario.employee_role}</td>
+                  <td data-title="Welcomekit">{funcionario.status}</td>
+                  <td data-title="">
+                    <img src={Edit} />
+                  </td>
+                </tbody>
+              ))}
             </table>
           </div>
         </div>

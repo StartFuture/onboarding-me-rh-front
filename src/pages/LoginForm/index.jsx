@@ -1,12 +1,19 @@
 import "./assets/css/style.css";
 import GradientImg from "./assets/img/Frame 14.png";
+import GradientImgMobile from "./assets/img/Frame 8.png";
 import Logo from "./assets/img/Logo (1).svg";
 
 const LoginForm = () => {
   return (
     <>
       <div class="full-container">
-        <img src={GradientImg} alt="" />
+        <img class="gradient-web" src={GradientImg} alt="Imagem de uma mulher sorrindo" />
+        <img
+          class="gradient-mobile"
+          src={GradientImgMobile}
+          alt="Imagem de uma mulher sorrindo"
+        />
+        <p>Crie o onboarding perfeito para sua empresa</p>
         <div class="container-form">
           <form class="login-logo">
             <img src={Logo} alt="" />
@@ -18,9 +25,9 @@ const LoginForm = () => {
             <button class="next-button">Prosseguir</button>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque rem
-              voluptates fuga odio vero cupiditate voluptas accusantium laudantium
-              voluptatum facilis temporibus praesentium neque ducimus libero,
-              distinctio totam possimus sit obcaecati.
+              voluptates fuga odio vero cupiditate voluptas accusantium
+              laudantium voluptatum facilis temporibus praesentium neque ducimus
+              libero, distinctio totam possimus sit obcaecati.
             </p>
           </form>
         </div>

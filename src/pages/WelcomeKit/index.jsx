@@ -41,7 +41,7 @@ const WelcomeKit = () => {
   const getKits = async () => {
     await api.get(`getall-welcome-kit/`)
       .then((res) => setTotalKits(res.data)
-      ).catch((err) => {
+      ).catch ((err) => {
         console.log(err)
       });
   }

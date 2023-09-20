@@ -32,3 +32,10 @@ width: 300px;
   gap: 24px;
   color: white;
 }
+
+@media screen and (max-width:752px ) {
+
+  .timeline{
+    display: none;
+  }
+}

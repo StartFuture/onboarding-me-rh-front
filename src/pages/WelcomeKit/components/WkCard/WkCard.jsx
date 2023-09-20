@@ -1,7 +1,10 @@
 import "../../assets/css/style.css"
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const WkCard = ({ kit }) => {
+
+  // const navigate = useNavigate()
 
   return (
     <>
@@ -9,7 +12,7 @@ const WkCard = ({ kit }) => {
         <img src={kit.image} alt="Imagem do Card" />
         <h4> {kit.name} </h4>
         <span>X itens por kit</span>
-        <a href="/">Acessar Kit &gt;</a>
+        <a href="/" >Acessar Kit &gt;</a>
       </div>
     </>
   );

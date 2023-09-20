@@ -6,7 +6,6 @@ import api from "../../services/api";
 import TopingMenu from "../../../../components/TopingMenu/index"
 import Modal from "../Modal/Modal";
 import RedTrashIcon from '../../../../assets/img/red-trash-icon.svg'
-import ItemImage from '../../assets/img/image5.png'
 
 const Form = () => {
 
@@ -15,13 +14,18 @@ const Form = () => {
   const [image, setImage] = useState();
   const [name, setName] = useState();
   const [modal, setModal] = useState(false);
+  const [items, setItems] = useState([]);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedItems, setSelectedItems] = useState([]);
 
   const createKit = async (e) => {
     e.preventDefault()
 
-    await api.post("create-welcome-kit/", {
-      "name": name,
-      "image": image
+    await api.post("welcome-kit/create-welcome-kit/", {
+      name: name,
+      image: image,
+      wk_items: selectedItems
     }).catch((err) => {
       console.error(err);
     })
@@ -44,10 +48,51 @@ const Form = () => {
     }
   }, [image])
 
-  
+
   const toItemForm = () => {
     navigate('/form-item');
   };
+
+  const getItems = async () => {
+    await api.get(`/welcome-kit-item/getall-welcome-kit-item/`)
+      .then((res) => setItems(res.data)
+      ).catch((err) => {
+        console.log(err)
+      });
+  }
+
+  useEffect(() => {
+    getItems();
+  }, [])
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const selectOption = (option) => {
+    setSelectedOption(option);
+    setIsDropdownOpen(false);
+  };
+
+  
+  useEffect(() => {
+    try {
+      if (selectedOption) {
+        setSelectedItems(current => [...current, selectedOption]);
+      }
+    } catch (error) {
+      console.log(error)
+    }
+
+  }, [selectedOption])
+  
+  console.log(selectedItems)
+  
+  const handleRemoveItem = (e, id) => {
+    e.preventDefault()
+    setSelectedItems((current) => current.filter((item) => id !== item.id))
+  };
+
 
   return (
     <div className="form-container-wk">
@@ -81,23 +126,48 @@ const Form = () => {
 
           <div className="items">
             <span>Itens</span>
-            <button onClick={toItemForm}>Adicionar Itens</button>
-          </div>
-          <div className="itemContainer">
-            <div className="itemWK">
-              <div className="itemImage">
-                <img src={ItemImage} alt="imagem do item" />
+            <div className="dropdown">
+              <div className="dropdown-toggle" onClick={toggleDropdown}>
+                {selectedOption && (
+                  <img src={selectedOption.image} alt={selectedOption.name} className="dropdown-option-image" />
+                )}
+                <span className="dropdown-option-label">
+                  {selectedOption ? selectedOption.name : 'Selecione um item'}
+                </span>
+                <span className="dropdown-caret"></span>
               </div>
-              <p>Item teste</p>
+              <ul className={`dropdown-menu ${isDropdownOpen ? 'open' : ''}`}>
+                {items?.map((option, index) => (
+                  <li key={index} onClick={() => selectOption(option)}>
+                    <img src={option.image} alt={option.name} className="dropdown-option-image" />
+                    <span className="dropdown-option-label">{option.name}</span>
+                  </li>
+                ))}
+              </ul>
+              <button onClick={toItemForm}>Criar Item</button>
             </div>
-            <div className="removeItem">
-              <img src={RedTrashIcon} alt="" />
-            </div>
-
           </div>
-          {/* <div className="no-items">
-            <span>Você não tem itens cadastrados no seu kit.</span>
-          </div> */}
+
+          {selectedOption ?
+            selectedItems?.map((item) => (
+
+              <div className="itemContainer">
+                <div className="itemWK" key={item?.id}>
+                  <div className="itemImage">
+                    <img src={item ? item.image : ''} alt="imagem do item" />
+                  </div>
+                  <p>{item ? item.name : ''}</p>
+                </div>
+                <div className="removeItem" onClick={(e) => handleRemoveItem(e, item.id)}>
+                  <img src={RedTrashIcon} alt="" />
+                </div>
+              </div>
+            ))
+            :
+            <div className="no-items">
+              <span>Você não tem itens cadastrados no seu kit.</span>
+            </div>
+          }
           <div className="buttons">
             <button className="cancel-button" onClick={() => window.location.reload(true)} >Cancelar</button>
             <button type="submit" className="save-button" onClick={(e) => createKit(e)} >Salvar</button>

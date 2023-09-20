@@ -1,0 +1,78 @@
+.full-container{
+  display: flex;
+  height: 100vh;
+}
+
+.login-logo img {
+  margin: 50px 0px;
+  padding: 0;
+  width: 40%;
+  height: 18%;
+}
+
+.container-form {
+  display: inline-block;
+  width: 53%;
+  height: 100%;
+  background: #f0f0f0;
+}
+
+.forget-button {
+  margin: 5px 0px;
+  padding: 0px;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  color: red;
+}
+
+.next-button {
+  margin: 50px 0px;
+  width: 100%;
+  background-color: rgba(206, 51, 45, 1);
+  border: none;
+  font-size: 16px;
+}
+
+.login-logo h4 {
+  color: rgba(46, 46, 46, 1);
+  font-style: normal;
+  font-size: 16px;
+  margin-bottom: 3px;
+  margin-top: 30px;
+}
+
+.login-logo input {
+  width: 100%;
+  height: 40px;
+  border: none;
+}
+
+.login-logo {
+  margin: 10vh;
+}
+
+@media (max-width: 1200px) {
+  .login-logo p {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .login-logo {
+    margin-top: auto;
+    margin: 0% 18%;
+  }
+
+  .gradient {
+    display: none;
+  }
+
+  .container-form {
+    display: block;
+    width: 100%;
+    height: 60%;
+    background: #f0f0f0;
+  }
+}
+

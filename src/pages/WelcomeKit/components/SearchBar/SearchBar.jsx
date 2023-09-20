@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import api from "../../services/api";
 
 const SearchBar = (props) => {
-
+  
   const [input, setInput] = useState("");
   const navigate = useNavigate();
 
@@ -13,7 +13,7 @@ const SearchBar = (props) => {
       .then((res) => props.handleChange(res.data)
       ).catch ((err) => {
         console.log(err)
-        if (err.response.statusText === "Not Found") {
+        if (err?.response?.statusText === "Not Found") {
           alert("Nenhum kit encontrado")
         }
       });
@@ -27,12 +27,10 @@ const SearchBar = (props) => {
     setInput(value)
   }
 
-
   const toWKForm = () => {
     navigate('/form-welcome-kit');
   };
-
-
+  
   return (
     <>
       <div className="content-search">

@@ -18,17 +18,29 @@ const Form = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
   const [selectedItems, setSelectedItems] = useState([]);
+  const [kitCompleto, setKitCompleto] = useState({})
 
   const createKit = async (e) => {
     e.preventDefault()
 
-    await api.post("welcome-kit/create-welcome-kit/", {
-      name: name,
-      image: image,
-      wk_items: selectedItems
-    }).catch((err) => {
-      console.error(err);
-    })
+    if(kitCompleto.id) {
+      await api.put(`welcome-kit/update-welcome-kit/${kitCompleto.id}`, {
+        name: name,
+        image: image,
+        wk_items: selectedItems
+      }).catch((err) => {
+        console.error(err);
+      })
+      
+    } else {
+      await api.post("welcome-kit/create-welcome-kit/", {
+        name: name,
+        image: image,
+        wk_items: selectedItems
+      }).catch((err) => {
+        console.error(err);
+      })
+    }
 
     setModal(true)
 
@@ -48,6 +60,8 @@ const Form = () => {
     }
   }, [image])
 
+  
+
 
   const toItemForm = () => {
     navigate('/form-item');
@@ -61,8 +75,22 @@ const Form = () => {
       });
   }
 
+  const getOneKit = async () => {
+    const queryParams = new URLSearchParams(window.location.search)
+    const wkId = queryParams.get("wk_id")
+
+    await api.get(`/welcome-kit/getone-welcome-kit/${wkId}`)
+      .then((res) => {setKitCompleto(res.data)
+        setSelectedItems(res.data.wk_items)
+      }
+      ).catch((err) => {
+        console.log(err)
+      });
+  }
+
   useEffect(() => {
     getItems();
+    getOneKit();
   }, [])
 
   const toggleDropdown = () => {
@@ -74,7 +102,7 @@ const Form = () => {
     setIsDropdownOpen(false);
   };
 
-  
+
   useEffect(() => {
     try {
       if (selectedOption) {
@@ -85,14 +113,18 @@ const Form = () => {
     }
 
   }, [selectedOption])
-  
-  console.log(selectedItems)
-  
+
   const handleRemoveItem = (e, id) => {
     e.preventDefault()
     setSelectedItems((current) => current.filter((item) => id !== item.id))
   };
 
+  const deleteKit = () => {
+    api.delete(`/welcome-kit/delete-welcome-kit/${kitCompleto.id}`)
+    .catch((error) => {
+      console.log(error)
+    })
+  }
 
   return (
     <div className="form-container-wk">
@@ -101,9 +133,11 @@ const Form = () => {
 
         <TopingMenu />
       </div>
+
       <div className="kit-container-wk">
         <div className="kit-title">
           <h4>Kit</h4>
+          <button onClick={deleteKit()}> delete </button>
         </div>
         <div>
           {modal && <Modal />}
@@ -114,12 +148,13 @@ const Form = () => {
             placeholder="Digite aqui"
             onChange={(e) => setName(e.target.value)
             }
+            defaultValue={kitCompleto.wk_name}
           />
 
           <div className="send-soon">
             <span>Anexe a imagem completa do kit.</span>
 
-            <DragDrop />
+            <DragDrop loadedImage={kitCompleto.wk_image} />
           </div>
 
           <hr />
@@ -148,7 +183,7 @@ const Form = () => {
             </div>
           </div>
 
-          {selectedOption ?
+          {(selectedOption || selectedItems.length > 0) ?
             selectedItems?.map((item) => (
 
               <div className="itemContainer">

@@ -22,7 +22,10 @@ function TopingMenu() {
           </button>
           <a>Funcionários</a>
           <ul class="menu">
-            <Link to="/welcome" style={{ padding: "0px", margin: "0px" }}>
+            <Link
+              to="/employee-listing"
+              style={{ padding: "0px", margin: "0px" }}
+            >
               <li>
                 <img
                   class="img-dashboard"
@@ -32,18 +35,30 @@ function TopingMenu() {
                 <span>Dashboard</span>
               </li>
             </Link>
-            <li>
-              <img src={FuncionariosWhite} alt="Employees Icon" />
-              <span>Funcionarios</span>
-            </li>
-            <li>
-              <img src={WelcomeKitsWhite} alt="Welcome Kit Icon" />
-              <span>Welcome Kit</span>
-            </li>
-            <li>
-              <img src={FeedbackWhite} alt="Feedback Icon" />
-              <span>Feedbacks</span>
-            </li>
+            <Link
+              to="/employee-listing"
+              style={{ padding: "0px", margin: "0px" }}
+            >
+              <li>
+                <img src={FuncionariosWhite} alt="Employees Icon" />
+                <span>Funcionarios</span>
+              </li>
+            </Link>
+            <Link to="/welcome-kit" style={{ padding: "0px", margin: "0px" }}>
+              <li>
+                <img src={WelcomeKitsWhite} alt="Welcome Kit Icon" />
+                <span>Welcome Kit</span>
+              </li>
+            </Link>
+            <Link
+              to="/employee-listing"
+              style={{ padding: "0px", margin: "0px" }}
+            >
+              <li>
+                <img src={FeedbackWhite} alt="Feedback Icon" />
+                <span>Feedbacks</span>
+              </li>
+            </Link>
             {/* <div class="footer-perfil">
           <img src={Elipse} alt="Perfil Image" />
           <div>

@@ -22,20 +22,37 @@ const EmployeeListing = () => {
       cpf: "111.111.111-11",
       status: "Pendente",
     },
-    
   ]);
 
-  const getKits = async () => {
-    await api.get(`/employee/getall-employee/`)
+  const getEmployee = async () => {
+    await api.get(`/employee/getall-employee-tracking/`)
       .then((res) => setListaFuncionario(res.data)
       ).catch ((err) => {
         console.log(err)
       });
   }
+
   
   useEffect(() => {
-    getKits();
+    getEmployee();
   }, [])
+
+  const trocaStatus = () => {
+    listaFuncionarios.map((funcionario) => {
+      if (funcionario.status === "to_be_send") {
+        funcionario.status = "a enviar"
+      }
+      if (funcionario.status === "sended") {
+        funcionario.status = "enviado"
+      }
+      if (funcionario.status === "delivered") {
+        funcionario.status = "entregue"
+      }
+    }
+    ) 
+  }
+  trocaStatus()
+
 
   return (
     <>

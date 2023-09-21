@@ -4,6 +4,18 @@
   display: flex;
 }
 
+.toping-menu {
+  display: none;
+}
+
+.div-mobile {
+  display: none;
+}
+
+.lateral-menu {
+  display: block;
+}
+
 .search-div input {
   height: 45px;
   width: 75%;
@@ -51,4 +63,76 @@
 
 .table-div hr {
   width: 495%;
+}
+
+@media (max-width: 700px) {
+  .full-div {
+    display: block;
+  }
+
+  .div-mobile {
+    display: block;
+    background: #fff;
+  }
+
+  .div-mobile div { 
+    margin: 15px;
+  }
+
+  .div-mobile p { 
+    padding: 10px;
+    margin: 0px;
+  }
+
+
+  .nome-card {
+    color: var(--Secondary, #1e1e1e);
+    font-family: Open Sans;
+    font-size: 16px;
+  }
+
+  .cpf-card {
+    color: var(--Gray-70, #666);
+    font-family: Open Sans;
+    font-size: 16px;
+  }
+
+  .cargo-card {
+    width: 60px;
+    display: flex;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 32px;
+    background: var(--Gray-20, #d9d9d9);
+  }
+
+  .container-table {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .container-table button {
+    display: none;
+  }
+
+  .container-table input {
+    width: 100%;
+    background: var(--White, #fff);
+    border: none;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .lateral-menu {
+    display: none;
+  }
+
+  .toping-menu {
+    display: block;
+  }
+
+  .table-div {
+    display: none;
+  }
 }

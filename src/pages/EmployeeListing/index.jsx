@@ -1,7 +1,8 @@
 import "./assets/css/style.css";
 import Edit from "./assets/img/Edit.svg";
 import LateralMenu from "../../components/LateralMenu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import api from "./services/api";
 
 const EmployeeListing = () => {
   const [listaFuncionarios, setListaFuncionario] = useState([
@@ -21,8 +22,37 @@ const EmployeeListing = () => {
       cpf: "111.111.111-11",
       status: "Pendente",
     },
-    
   ]);
+
+  const getEmployee = async () => {
+    await api.get(`/employee/getall-employee-tracking/`)
+      .then((res) => setListaFuncionario(res.data)
+      ).catch ((err) => {
+        console.log(err)
+      });
+  }
+
+  
+  useEffect(() => {
+    getEmployee();
+  }, [])
+
+  const trocaStatus = () => {
+    listaFuncionarios.map((funcionario) => {
+      if (funcionario.status === "to_be_send") {
+        funcionario.status = "a enviar"
+      }
+      if (funcionario.status === "sended") {
+        funcionario.status = "enviado"
+      }
+      if (funcionario.status === "delivered") {
+        funcionario.status = "entregue"
+      }
+    }
+    ) 
+  }
+  trocaStatus()
+
 
   return (
     <>

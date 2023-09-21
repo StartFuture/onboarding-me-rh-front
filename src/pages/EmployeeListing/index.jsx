@@ -1,7 +1,8 @@
 import "./assets/css/style.css";
 import Edit from "./assets/img/Edit.svg";
 import LateralMenu from "../../components/LateralMenu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import api from "./services/api";
 
 const EmployeeListing = () => {
   const [listaFuncionarios, setListaFuncionario] = useState([
@@ -23,6 +24,18 @@ const EmployeeListing = () => {
     },
     
   ]);
+
+  const getKits = async () => {
+    await api.get(`/employee/getall-employee/`)
+      .then((res) => setListaFuncionario(res.data)
+      ).catch ((err) => {
+        console.log(err)
+      });
+  }
+  
+  useEffect(() => {
+    getKits();
+  }, [])
 
   return (
     <>

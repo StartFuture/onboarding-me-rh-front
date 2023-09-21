@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
 .full-div {
   display: flex;
 }
@@ -25,18 +27,28 @@
 }
 
 .table-div thead {
-    padding: 10px;
+  color: var(--Gray-70, #918b8b);
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .table-div table {
+  padding: 20px;
+  gap: 25px;
   text-align: left;
   background-color: white;
   margin-top: 30px;
   width: 100%;
-  font-size: 18px;
-  font-style: normal;
+}
+
+.table-div tbody {
+  font-size: 16px;
+  color: var(--Secondary, #1e1e1e);
+  font-family: "Open Sans";
+  font-weight: 400;
 }
 
 .table-div hr {
-  width: 475%;
+  width: 495%;
 }

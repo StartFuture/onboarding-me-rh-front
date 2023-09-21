@@ -17,7 +17,7 @@ const WelcomeKit = () => {
   const { actualPage, setActualPage } = usePagination();
 
   const getPaginatedKits = async (page) => {
-    await api.get(`/getall-wk-paginated/?page=${page}`)
+    await api.get(`getall-wk-paginated/?page=${page}`)
       .then((res) => setKits(res.data)
       ).catch((err) => {
         console.log(err)
@@ -39,7 +39,7 @@ const WelcomeKit = () => {
 
 
   const getKits = async () => {
-    await api.get(`/getall-welcome-kit/`)
+    await api.get(`getall-welcome-kit/`)
       .then((res) => setTotalKits(res.data)
       ).catch ((err) => {
         console.log(err)

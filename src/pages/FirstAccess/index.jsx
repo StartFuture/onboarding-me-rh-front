@@ -5,7 +5,7 @@ import Timeline from "../../components/TimeLine";
 const FirstAccess = () => {
   return (
     <>
-      <Timeline />
+      <Timeline currPage="1" />
       <div class="firstaccess-container-form">
         <div class="bar-mobile"></div>
         <div class="firstaccess-content-form">

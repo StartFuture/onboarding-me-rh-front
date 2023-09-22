@@ -1,23 +1,8 @@
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-/* label {
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+.timeline {
+  width: 20%;
   background: #ce332d;
-  width: Fixed (359px);
-  height: Fixed (1, 200px);
-  padding: 400px 24px 72px 24px;
-  justify-content: space-between;
-} */
-/* label{
-  border: 1px solid red;
-display: flex;
-width: 300px;
-} */
-.timeline{
-  width:20%;
-  background:#ce332d ;
   height: 100vh;
   justify-content: center;
   display: flex;
@@ -26,16 +11,29 @@ width: 300px;
   position: fixed;
 }
 
-.divinput{
+.timeline div {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
-  color: white;
+  width: 60%;
+  justify-content: start;
+  margin: 0px auto;
 }
 
-@media screen and (max-width:752px ) {
+.timeline label {
+  color: white;
+  font-family: Open Sans;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 20px 0px 20px 10px;
+}
 
-  .timeline{
+.timeline-logo {
+  bottom: 0; 
+  position: fixed;
+  margin-bottom: 8vh;
+}
+
+@media screen and (max-width:800px) {
+  .timeline {
     display: none;
   }
 }

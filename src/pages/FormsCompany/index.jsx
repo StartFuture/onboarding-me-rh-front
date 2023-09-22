@@ -6,7 +6,7 @@ const FormsCompany = () => {
   return (
     <>
       <div className="conteudo">
-        <Timeline />
+        <Timeline currPage="0" isCompany="true" />
         <Form />
       </div>
     </>

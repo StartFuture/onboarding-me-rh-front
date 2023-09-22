@@ -5,9 +5,12 @@ import WelcomeImage from "./assets/img/Celebration-amico (1).svg";
 import LogoOnboarding from "./assets/img/ME.svg";
 
 const Welcome = () => {
+  const queryParams = new URLSearchParams(window.location.search)
+  const isCompany = queryParams.get("c")
+
   return (
     <>
-      <Timeline />
+      <Timeline currPage="2" isCompany={isCompany} />
       <div class="container-welcome">
         <div class="bar-mobile"></div>
         <div class="content-welcome">
@@ -15,7 +18,7 @@ const Welcome = () => {
           <h1>Bem Vindo a</h1>
           <img class="logo-onboarding" src={LogoOnboarding} alt="Pessoas comemorando" />
           <Link to="/">
-            <button style={{cursor: "pointer"}}>Acessar Portal</button>
+            <button style={{ cursor: "pointer" }}>Acessar Portal</button>
           </Link>
         </div>
       </div>

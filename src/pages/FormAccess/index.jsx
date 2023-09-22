@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const FormAccess = () => {
   return (
     <>
-      <Timeline />
+      <Timeline currPage="1" isCompany="true" />
       <div class="formaccess-container-form">
         <div class="bar-mobile"></div>
         <div class="formaccess-content-form">
@@ -19,7 +19,7 @@ const FormAccess = () => {
             <h4>Confirmar senha <strong>*</strong></h4>
             <input type="text" placeholder="Digite aqui" />
           </form>
-          <Link to="/welcome">
+          <Link to="/welcome?c=true">
             <button class="formaccess-next-button">Prosseguir</button>
           </Link>
           <Link to='/forms-company'>

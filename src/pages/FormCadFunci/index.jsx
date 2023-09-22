@@ -28,44 +28,9 @@ const FormsCadFunci = () => {
     welcome_kit_id: 0
   })
 
-  // const [employee, setEmployee] = useState({
-  //   first_name: "string",
-  //   surname: "string",
-  //   birthdate: "2023-09-21",
-  //   employee_role: "string",
-  //   email: "user@example.com",
-  //   employee_password: "string",
-  //   phone_number: "55943046508",
-  //   cpf: "144.774536-93",
-  //   level_access: "default",
-  //   company_id: 1,
-  //   address_id: 1
-  // })
-
-  // const [address, setAddress] = useState({
-  //   num: "string",
-  //   complement: "string",
-  //   zipcode: "95790200",
-  //   street: "string",
-  //   district: "string",
-  //   city: "string",
-  //   state: "string"
-  // })
-
-  // const [tracking, setTracking] = useState({
-  //   tracking_code: "string",
-  //   status: "to_be_send",
-  //   employee_id: 0,
-  //   welcome_kit_id: 0
-  // })
-
-  const changeHandler = e => {
-    setForm(form => {
-      return { ...form, [e.target.name]: e.target.value }
-    })
-  }
-
   const [welcomeKit, setWelcomeKit] = useState()
+  // const [adressId, setAddressId] = useState()
+  // const [employeeId, setEmployeeId] = useState()
 
   useEffect(() => {
     const cepOnlyNumbers = cep.replace(/[^0-9]/g, '');
@@ -88,25 +53,39 @@ const FormsCadFunci = () => {
   const createEmployee = async (e) => {
     e.preventDefault()
 
-    await api.post("/employee/create-employee/", {
-      first_name: first_name,
-      surname: surname,
-      birthdate: form.birthdate,
-      employee_role: form.employee_role,
-      email: form.email,
-      phone_number: form.phone_number,
-      cpf: form.cpf,
-      num: form.num,
-      complement: form.complement,
-      zipcode: form.zipcode,
-      street: form.street,
-      city: form.city,
-      state: form.state,
-      status: form.status,
-      welcome_kit_id: form.welcome_kit_id
-    }).catch((err) => {
-      console.error(err);
-    })
+    trocaStatus()
+
+    await api.post("/address/create-address/",
+      {
+        "address_info": {
+          num: form.num,
+          complement: form.complement,
+          zipcode: cep,
+          street: cepBody.logradouro,
+          city: cepBody.localidade,
+          state: cepBody.uf,
+          district: cepBody.bairro
+        },
+        "employee_info": {
+          first_name: first_name,
+          surname: surname,
+          birthdate: form.birthdate,
+          employee_role: form.employee_role,
+          email: form.email,
+          phone_number: form.phone_number,
+          cpf: form.cpf,
+          employee_password: "123123",
+          level_access: "default",
+          company_id: 1
+        }, "tracking_info": {
+          tracking_code: "tracking teste",
+          status: form.status,
+          welcome_kit_id: form.welcome_kit_id
+        }
+      }).catch((err) => {
+        console.error(err);
+      }
+      )
 
     setModal(true)
 
@@ -124,10 +103,32 @@ const FormsCadFunci = () => {
     getWelcomeKits();
   }, [])
 
+  const changeHandler = e => {
+    setForm(form => {
+      return { ...form, [e.target.name]: e.target.value }
+    })
+  }
+
   // tratando nome completo
   const complete_name = (form.first_name).split(' ')
   const first_name = complete_name[0]
-  const surname = (complete_name.toString()).replace(`${first_name},`, "")
+  const surname = (complete_name.toString()).replace(`${first_name}`, "").replace(",", "")
+
+  //troca status do tracking para o padrão do backend
+  const trocaStatus = () => {
+    if (form.status === "Não entregue") {
+      form.status = "to_be_send"
+    }
+    if (form.status === "Transportando") {
+      form.status = "sended"
+    }
+    if (form.status === "Entregue") {
+      form.status = "delivered"
+    }
+    return form.status
+  }
+
+  // console.log(form)
 
   return (
 
@@ -271,7 +272,7 @@ const FormsCadFunci = () => {
                 />
                 <datalist id="kit">
                   {welcomeKit?.map((option) => (
-                    <option key={option.id} value={option.name}>{option.name}</option>
+                    <option key={option.id} value={option.id}>{option.name}</option>
                   ))}
                 </datalist>
               </div>

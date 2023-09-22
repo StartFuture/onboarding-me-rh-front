@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import api from "../../services/api";
 import TopingMenu from "../../../../components/TopingMenu";
 import Modal from "../Modal/Modal";
+import { Link } from "react-router-dom";
 
 const Form = () => {
 
@@ -69,7 +70,9 @@ const Form = () => {
           </div>
 
           <div className="buttons">
-            <button className="cancel-button" onClick={() => window.location.reload(true)}>Cancelar</button>
+            <Link to="/form-welcome-kit">
+            <button className="cancel-button">Cancelar</button>
+            </Link>
             <button type="submit" className="save-button" onClick={(e) => createItem(e)}>Salvar</button>
           </div>
         </form>

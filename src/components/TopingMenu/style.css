@@ -1,3 +1,7 @@
+.toping-menu {
+  display: none;
+}
+
 .nav ul {
   margin: 0px;
   padding: 0px;
@@ -53,6 +57,10 @@
 @media (min-width: 1001px) {
   .header {
     display: none;
+  }
+
+  .toping-menu {
+    display: block;
   }
 }
 

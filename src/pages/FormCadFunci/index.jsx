@@ -3,6 +3,7 @@ import LateralMenu from "../../components/LateralMenu";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import TopingMenu from "../../components/TopingMenu";
 
 const FormsCadFunci = () => {
   const [cep, setCep] = useState("");
@@ -30,6 +31,7 @@ const FormsCadFunci = () => {
     <>
       <div className="conteudo">
         <LateralMenu />
+        <TopingMenu />
         <div className="formcadfuncionario">
 
           <form className="formcontent">

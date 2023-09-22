@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+.on-build-page {
+    width: 80%;
+    margin-left: 20%;
+}
+
+.on-build-container {
+    width: 50%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: start;
+    padding-top: 5vh;
+}
+
+.on-build-container h1 {
+    color: #CE332D;
+    text-align: center;
+    font-family: "Lexend Exa";
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.on-build-container h2 {
+    color: #1E1E1E;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.on-build-container img {
+    width: 100%;
+    margin: 20px auto;
+}
+
+@media (max-width: 800px) {
+    .on-build-container {
+        width: 80%;
+        height: auto;
+    }
+
+    .on-build-page {
+        width: 100%;
+        margin: 0px;
+    }
+}

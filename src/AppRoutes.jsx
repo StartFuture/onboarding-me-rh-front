@@ -9,6 +9,8 @@ import FormItem from "./pages/FormItem";
 import LoginForm from "./pages/LoginForm";
 import FormsCadFunci from "./pages/FormCadFunci";
 import EmployeeListing from "./pages/EmployeeListing";
+import NotFoundPage from "./pages/NotFoundPage";
+import OnBuildPage from "./pages/OnBuildPage";
 
 const AppRoutes = () => {
   return (
@@ -24,6 +26,8 @@ const AppRoutes = () => {
         <Route path="/form-item" element={<FormItem/>} />
         <Route path="/employee-listing" element={<EmployeeListing/>} />
         <Route path="/forms-cadfuncionario" element={<FormsCadFunci/>} />
+        <Route path="/on-build" element={<OnBuildPage />} />
+        <Route path="*" element={<NotFoundPage/>} />
       </Routes>
     </BrowserRouter>
   );

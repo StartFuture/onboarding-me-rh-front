@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+.not-found-container {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: start;
+}
+
+.not-found-container h1 {
+    margin-bottom: 10px;
+    color: #CE332D;
+    font-family: Lexend Exa;
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.not-found-container h2 {
+    margin: 0.1rem 0px;
+    color: #1E1E1E;
+    font-family: Open Sans;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+
+.not-found-container img {
+    width: 100%;
+    margin: 20px auto;
+}
+
+.not-found-textdiv {
+    text-align: start;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+.not-found-textdiv span {
+    color: #1E1E1E;
+    font-family: Open Sans;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.not-found-container button {
+    width: 30%;
+    background-color: rgba(206, 51, 45, 1);
+    color: #ffffff;
+    border: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+    padding: 20px 0px;
+    cursor: pointer;
+}
+
+.not-found-container button:hover {
+    background-color: #a3332d;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .not-found-container {
+        width: 80%;
+    }
+
+    .not-found-container button {
+        width: 100%;
+    }
+}

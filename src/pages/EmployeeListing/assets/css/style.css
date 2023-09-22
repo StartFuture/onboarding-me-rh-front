@@ -4,16 +4,8 @@
   display: flex;
 }
 
-.toping-menu {
-  display: none;
-}
-
 .div-mobile {
   display: none;
-}
-
-.lateral-menu {
-  display: block;
 }
 
 .search-div input {
@@ -122,14 +114,6 @@
     border: none;
     margin: 0px;
     padding: 0px;
-  }
-
-  .lateral-menu {
-    display: none;
-  }
-
-  .toping-menu {
-    display: block;
   }
 
   .table-div {

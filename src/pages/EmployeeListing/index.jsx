@@ -36,9 +36,9 @@ const EmployeeListing = () => {
   const MobileCard = ({ nome, cpf, cargo }) => {
     return (
       <div class="mobile-card">
-          <p class="nome-card">{nome}</p>
-          <p class="cpf-card">{cpf}</p>
-          <p class="cargo-card">{cargo}</p>
+        <p class="nome-card">{nome}</p>
+        <p class="cpf-card">{cpf}</p>
+        <p class="cargo-card">{cargo}</p>
       </div>
     );
   };
@@ -46,19 +46,14 @@ const EmployeeListing = () => {
   return (
     <>
       <div class="full-div">
-        <div class="lateral-menu">
-          <LateralMenu />
-        </div>
-
-        <div class="toping-menu">
-          <TopingMenu />
-        </div>
+        <LateralMenu />
+        <TopingMenu />
 
         <div class="container-table">
           <div class="search-div">
             <input type="text" />
             <Link to="../forms-cadfuncionario">
-              <button style={{cursor: "pointer"}}>
+              <button style={{ cursor: "pointer" }}>
                 Adicionar Funcionário
               </button>
             </Link>

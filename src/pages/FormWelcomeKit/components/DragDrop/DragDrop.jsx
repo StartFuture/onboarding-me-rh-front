@@ -1,13 +1,19 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Upload from "../../assets/img/Upload.svg";
 import RedTrashIcon from "../../../../assets/img/red-trash-icon.svg"
 import "../../assets/css/DragDrop.css";
 
-const DragDrop = ({}) => {
+const DragDrop = ({loadedImage}) => {
+
   const [image, setImage] = useState(null);
   const [preview, setPreview] = useState(Upload);
   const [dragActive, setDragActive] = useState(false);
   const inputRef = useRef(null);
+  
+  useEffect(() => {
+    setImage(loadedImage)
+    setPreview(loadedImage ? loadedImage : Upload)
+  }, [loadedImage])
 
   const handleDrag = function (e) {
     e.preventDefault();
@@ -63,7 +69,7 @@ const DragDrop = ({}) => {
 
   return (
     <>
-      <form style={{ display: image ? "none" : "block" }}
+      <form style={{ display: (image) ? "none" : "block" }}
         className="logoimg" onDragEnter={handleDrag} onSubmit={(e) => e.preventDefault()} onClick={onButtonClick}>
         <input ref={inputRef} type="file" id="input-file-upload"
           multiple={true} onChange={handleChange} style={{ display: "none" }} />
@@ -77,7 +83,7 @@ const DragDrop = ({}) => {
         {dragActive && <div id="drag-file-element" onDragEnter={handleDrag} onDragLeave={handleDrag} onDragOver={handleDrag} onDrop={handleDrop}></div>}
       </form>
 
-      <div style={{ display: !image ? "none" : "flex" }} className="logo-inserted">
+      <div style={{ display: !(image) ? "none" : "flex" }} className="logo-inserted">
         <img className="logo-inserted-preview" src={preview} alt="logo da sua empresa" />
         <div>
           <h4>{image?.name}</h4>

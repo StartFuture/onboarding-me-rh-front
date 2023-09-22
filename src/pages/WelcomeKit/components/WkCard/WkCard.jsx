@@ -1,5 +1,6 @@
 import "../../assets/css/style.css"
 import React from "react";
+import { Link } from "react-router-dom";
 
 const WkCard = ({ kit }) => {
 
@@ -9,7 +10,10 @@ const WkCard = ({ kit }) => {
         <img src={kit.image} alt="Imagem do Card" />
         <h4> {kit.name} </h4>
         <span>X itens por kit</span>
-        <a href="/">Acessar Kit &gt;</a>
+        <Link to={{
+          pathname: '/form-welcome-kit',
+          search: `?wk_id=${kit.id}`,
+        }}>Acessar Kit &gt;</Link>
       </div>
     </>
   );

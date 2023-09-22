@@ -1,20 +1,19 @@
-body,
-ul {
+.nav ul {
   margin: 0px;
   padding: 0px;
 }
 
-li {
+.nav li {
   display: flex;
 }
 
-a {
+.nav a {
   text-decoration: none;
   color: white;
   font-family: "Open Sans";
 }
 
-a:hover {
+.nav a:hover {
   background: rgba(0, 0, 0, 0.05);
 }
 

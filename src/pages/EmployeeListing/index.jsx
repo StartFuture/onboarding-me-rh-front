@@ -1,6 +1,7 @@
 import "./assets/css/style.css";
 import Edit from "./assets/img/Edit.svg";
 import LateralMenu from "../../components/LateralMenu";
+import TopingMenu from "../../components/TopingMenu";
 import { useState } from "react";
 
 const EmployeeListing = () => {
@@ -21,18 +22,50 @@ const EmployeeListing = () => {
       cpf: "111.111.111-11",
       status: "Pendente",
     },
-    
+    {
+      first_name: "Beatriz",
+      surname: "Andrade",
+      employee_role: "CEO",
+      email: "beatriz.andraddee@gmail.com",
+      cpf: "222.222.222-22",
+      status: "A enviar",
+    },
   ]);
+
+  const MobileCard = ({ nome, cpf, cargo }) => {
+    return (
+      <div class="mobile-card">
+          <p class="nome-card">{nome}</p>
+          <p class="cpf-card">{cpf}</p>
+          <p class="cargo-card">{cargo}</p>
+      </div>
+    );
+  };
 
   return (
     <>
       <div class="full-div">
-        <LateralMenu />
+        <div class="lateral-menu">
+          <LateralMenu />
+        </div>
+
+        <div class="toping-menu">
+          <TopingMenu />
+        </div>
+
         <div class="container-table">
           <div class="search-div">
             <input type="text" />
             <button>Adicionar Funcionário</button>
           </div>
+          <div className="div-mobile">
+            <MobileCard
+              nome="Marcelo Henrique Santos"
+              cpf="444.212.422-12"
+              cargo="Diretor"
+            />
+          </div>
+
           <div class="table-div">
             <table>
               <thead>
@@ -46,7 +79,9 @@ const EmployeeListing = () => {
               <hr />
               {listaFuncionarios.map((funcionario) => (
                 <tbody>
-                  <td data-title="Nome">{funcionario.first_name + " " + funcionario.surname}</td>
+                  <td data-title="Nome">
+                    {funcionario.first_name + " " + funcionario.surname}
+                  </td>
                   <td data-title="CPF">{funcionario.cpf}</td>
                   <td data-title="E-mail">{funcionario.email}</td>
                   <td data-title="Cargo">{funcionario.employee_role}</td>

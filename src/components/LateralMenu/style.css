@@ -19,6 +19,7 @@ strong {
 }
 
 .logo {
+  margin-top: 50px;
   min-width: 250px; 
   height: 100px;
   background: url("../../assets/img/LogoUber.png") no-repeat center;

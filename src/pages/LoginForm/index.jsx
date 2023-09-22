@@ -3,17 +3,27 @@ import GradientImg from "./assets/img/Frame 14.png";
 import GradientImgMobile from "./assets/img/Frame 8.png";
 import Logo from "./assets/img/Logo (1).svg";
 
+
 const LoginForm = () => {
   return (
     <>
       <div class="full-container">
-        <img class="gradient-web" src={GradientImg} alt="Imagem de uma mulher sorrindo" />
+        <img
+          class="gradient-web"
+          src={GradientImg}
+          alt="Imagem de uma mulher sorrindo"
+        />
         <img
           class="gradient-mobile"
           src={GradientImgMobile}
           alt="Imagem de uma mulher sorrindo"
         />
-        <p>Crie o onboarding perfeito para sua empresa</p>
+        <div class="slogan-div"> 
+        <h1>
+          Crie o <br /> Onboarding <br /> perfeito para <br />
+          sua empresa
+        </h1>
+        </div>
         <div class="container-form">
           <form class="login-logo">
             <img src={Logo} alt="" />

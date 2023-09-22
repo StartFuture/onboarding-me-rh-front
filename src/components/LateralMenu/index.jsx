@@ -13,7 +13,7 @@ function LateralMenu() {
         <div class="logo"></div>
         <div class="navigation-div">
           <Link
-            to="/employee-listing"
+            to="/on-build"
             style={{ padding: "0px", margin: "0px", textDecoration: "none", color: "#000" }}
           >
             <div class="navigation-item">
@@ -40,7 +40,7 @@ function LateralMenu() {
             </div>
           </Link>
           <Link
-            to="/employee-listing"
+            to="/on-build"
             style={{ padding: "0px", margin: "0px", textDecoration: "none", color: "#000"  }}
           >
             <div class="navigation-item">

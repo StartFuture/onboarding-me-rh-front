@@ -5,6 +5,7 @@ import DragDrop from "../DragDrop/DragDrop";
 const Form = () => {
   return (
     <div className="form-container">
+      <div class="bar-mobile"></div>
       <div class="title">
         <h3>Cadastre sua empresa :) </h3>
         <span>Campos Obrigatórios sinalizado com *</span>

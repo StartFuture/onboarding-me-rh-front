@@ -1,86 +1,89 @@
-.container-form {
-    margin-left: auto;
-    width: 80%;
-    height: 100vh;
-    background-color: #f9f9f9;
-  }
-  
-  .content-form {
-    width: 50%;
-    height: 30vh;
-    margin: auto;
-    padding-top: 3vh;
-    text-align: auto;
-  }
-  
-  .container-form h3 {
-    color: #ce332d;
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: 0em;
-    margin-bottom: 10px;
-  }
-  
-  .container-form h5 {
-    margin: 0px;
-    font-size: 16px;
-    line-height: 15px;
-    text-align: left;
-    margin-bottom: 7vh;
-  }
-  
-  .content-form h4 {
+.firstaccess-container-form {
+  margin-left: auto;
+  width: 80%;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.firstaccess-content-form {
+  width: 50%;
+  height: 30vh;
+  margin: auto;
+  padding-top: 3vh;
+  text-align: auto;
+}
+
+.firstaccess-container-form h3 {
+  color: #ce332d;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0em;
+  margin-bottom: 10px;
+}
+
+.firstaccess-container-form h5 {
+  margin: 0px;
+  font-size: 16px;
+  line-height: 15px;
+  text-align: left;
+  margin-bottom: 7vh;
+}
+
+.firstaccess-content-form h4 {
+  width: 100%;
+  margin: 0px;
+  margin-bottom: 5px;
+}
+
+.firstaccess-content-form strong {
+  color: #ce332d;
+}
+
+.firstaccess-content-form input {
+  border-radius: 4px;
+  width: 100%;
+  height: 30px;
+  border: none;
+  padding: 5px;
+  margin-bottom: 24px;
+}
+
+.firstaccess-next-button {
+  margin-top: 30px;
+  width: 100%;
+  background-color: rgba(206, 51, 45, 1);
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+  padding: 20px 0px;
+  cursor: pointer;
+}
+
+.firstaccess-next-button:hover {
+  background-color: #a3332d;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .firstaccess-container-form {
     width: 100%;
-    margin: 0px;
-    margin-bottom: 5px;
   }
-  
-  .content-form strong {
-    color: #ce332d;
+
+  .firstaccess-content-form {
+    width: 85%;
   }
-  
-  .content-form input {
-    border-radius: 4px;
+
+  .firstaccess-content-form h3 {
+    font-size: 44px;
+    font-weight: 300;
+  }
+
+  .bar-mobile {
+    background-color: rgba(206, 51, 45, 1);
+    display: flex;
+    height: 4%;
     width: 100%;
-    height: 30px;
-    border: none;
-    padding: 5px;
-    margin-bottom: 24px;
   }
-  
-  .back-button {
-    background: none;
-    width: 100%;
-    padding: 20px 0px;
-    border: none;
-    color: #ce332d;
-    font-size: 16px;
-  }
-  
-  .next-button:hover {
-    background-color: #a3332d;
-    text-decoration: underline;
-  }
-  
-  @media (max-width: 600px) {
-    .container-form {
-      width: 100%;
-    }
-  
-    .content-form {
-      width: 85%;
-    }
-  
-    .content-form h3 {
-      font-size: 44px;
-      font-weight: 300;
-    }
-  
-    .bar-mobile {
-      background-color: rgba(206, 51, 45, 1);
-      display: flex;
-      height: 4%;
-      width: 100%;
-    }
-  }
-  
+}

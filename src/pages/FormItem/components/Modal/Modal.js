@@ -14,10 +14,10 @@ function Modal() {
                     <img src={Success} alt="Success" />
                 </div>
                 <div className='body'>
-                    <p>Kit adicionado com sucesso</p>
+                    <p>Item adicionado com sucesso</p>
                 </div>
                 <div className='footer'>
-                    <button onClick={(e) => navigate("/form-item")}>Continuar</button>
+                    <button onClick={(e) => navigate("/welcome-kit")}>Continuar</button>
                 </div>
             </div>
         </div>

@@ -138,7 +138,6 @@ const Form = () => {
       <div className="kit-container-wk">
         <div className="kit-title">
           <h4>Kit</h4>
-          <button onClick={deleteKit()}> delete </button>
         </div>
         <div>
           {modal && <Modal />}

@@ -57,9 +57,7 @@
 .flexinput {
   width: 100%;
   display: flex;
-  /* justify-content: space-between; */
   gap: 10px;
-
 }
 
 .flexinput input {
@@ -84,54 +82,59 @@
 }
 
 
-.btn {
+.cadfunc-btn {
   display: flex;
   width: 98%;
-  justify-content: center;
-  padding-top: 50px;
-  align-items: center;
-  gap: 8px;
+  justify-content: space-evenly;
+  padding: 3vh 0px;
 }
 
-.btn button {
-  width: 125px;
-  padding: 5px 10px;
+.cadfunc-btn button {
+  padding: 10px 100px;
   border-radius: 4px;
-  gap: 8px;
-  font-family: Open Sans;
   font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
 }
 
 .btn-salvar {
   background: var(--primary, #CE332D);
-   color: var(--white, #FFF);
+  color: var(--white, #FFF);
+  cursor: pointer;
+  border: none;
 }
 
-.btn-cancelar{
-border: 1px solid var(--primary, #CE332D);
-background: var(--white, #FFF);
-color: #CE332D;
+.btn-salvar:hover {
+  background: var(--primary, #6b1916);
+  color: var(--white, #FFF);
+  cursor: pointer;
+  border: none;
 }
 
+.btn-cancelar {
+  border: 1px solid var(--primary, #CE332D);
+  background: var(--white, #FFF);
+  color: #CE332D;
+  cursor: pointer;
+}
 
-@media screen and (max-width:752px ) {
+.btn-cancelar:hover {
+  text-decoration: underline;
+}
 
-  .formcadfuncionario{
+@media screen and (max-width:752px) {
+  .formcadfuncionario {
     width: 100%;
     margin-left: 0;
   }
-  .flexinput{
+
+  .flexinput {
     flex-direction: column;
   }
 
-  .flexinput input{
+  .flexinput input {
     width: 98%;
   }
- 
-  .btn button{
+
+  .btn button {
     font-size: 12px;
   }
 }

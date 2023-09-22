@@ -3,6 +3,7 @@ import Edit from "./assets/img/Edit.svg";
 import LateralMenu from "../../components/LateralMenu";
 import TopingMenu from "../../components/TopingMenu";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const EmployeeListing = () => {
   const [listaFuncionarios, setListaFuncionario] = useState([
@@ -56,7 +57,11 @@ const EmployeeListing = () => {
         <div class="container-table">
           <div class="search-div">
             <input type="text" />
-            <button>Adicionar Funcionário</button>
+            <Link to="../forms-cadfuncionario">
+              <button style={{cursor: "pointer"}}>
+                Adicionar Funcionário
+              </button>
+            </Link>
           </div>
           <div className="div-mobile">
             <MobileCard

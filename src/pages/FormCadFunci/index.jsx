@@ -2,26 +2,27 @@ import "../FormCadFunci/assets/css/style.css";
 import LateralMenu from "../../components/LateralMenu";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const FormsCadFunci = () => {
   const [cep, setCep] = useState("");
   const [cepBody, setCepBody] = useState({});
 
   useEffect(() => {
-    const cepOnlyNumbers = cep.replace(/[^0-9]/g,'');
+    const cepOnlyNumbers = cep.replace(/[^0-9]/g, '');
     if (cepOnlyNumbers.length === 8) {
       axios({
         method: "GET",
         url: `https://viacep.com.br/ws/${cepOnlyNumbers}/json/`,
       })
-      .then((response) => {
-        if (!response.data.erro) {
-          setCepBody(response.data)
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+        .then((response) => {
+          if (!response.data.erro) {
+            setCepBody(response.data)
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     }
   }, [cep])
 
@@ -57,7 +58,7 @@ const FormsCadFunci = () => {
 
             <div className="maior">
               <h4>Cargo</h4>
-              <input type="text" placeholder="Digite aqui" list="55"/>
+              <input type="text" placeholder="Digite aqui" list="55" />
               <datalist id="55">
                 <option value="Analista"></option>
                 <option value="RH"></option>
@@ -149,10 +150,13 @@ const FormsCadFunci = () => {
               </div>
             </div>
 
-            <div className="btn">
-
-              <button className="btn-cancelar">Cancelar</button>
-              <button className="btn-salvar">Salvar</button>
+            <div className="cadfunc-btn">
+              <Link to="/employee-listing">
+                <button className="btn-cancelar">Cancelar</button>
+              </Link>
+              <Link to="/employee-listing">
+                <button className="btn-salvar">Salvar</button>
+              </Link>
             </div>
           </form>
         </div>

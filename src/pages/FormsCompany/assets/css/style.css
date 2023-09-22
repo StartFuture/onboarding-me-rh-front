@@ -1,7 +1,4 @@
-.conteudo {
-  display: flex;
-  flex-direction: row;
-}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 .form-container {
   display: flex;
@@ -13,6 +10,10 @@
   background: #f9f9f9;
 }
 
+.form-container strong {
+  color: #ce332d;
+}
+
 .title {
   width: 50%;
   margin: 50px 0px 30px;
@@ -21,7 +22,7 @@
 .title h3 {
   color: var(--primary, #ce332d);
   margin: 0px;
-  font-family: Lexend Exa;
+  font-family: "Lexend Exa";
   font-size: 32px;
   font-style: normal;
   font-weight: 300;
@@ -32,10 +33,10 @@
   font-size: 16px;
 }
 
-.company-form {
+.form-company {
   width: 50%;
 }
-.company-form input {
+.form-company input {
   font-size: 16px;
   width: 98%;
   border-radius: 3px;
@@ -46,7 +47,7 @@
   border-width: 1px;
 }
 
-.company-form h4 {
+.form-company h4 {
   margin: 25px 0px 8px;
 }
 
@@ -66,7 +67,10 @@
   border-radius: 4px;
   background: #ce332d;
   color: #ffff;
-  padding: 10px;
+  padding: 15px 0px;
+  margin: 5px 0px 50px 0px;
+  font-size: large;
+  cursor: pointer;
 }
 
 .form-container hr {
@@ -74,26 +78,22 @@
   margin: 50px 0px;
 }
 
-.checkbox {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+.form-company-checkbox {
+  display: block;
   width: 100%;
   margin-bottom: 50px;
 }
 
-.checkbox div {
-  display: flex;
+.form-company-checkbox input {
+  width: 20px;
+  height: 20px;
+  margin: 12px 20px 12px 0px;
 }
 
-.checkbox input {
-  width: 25px;
-}
-
-.checkbox label {
+.form-company-checkbox label {
   color: var(--gray-100, #2e2e2e);
-  font-family: Open Sans;
-  font-size: 16px;
+  font-family: "Open Sans";
+  font-size: 18px;
 }
 
 .send-soon {

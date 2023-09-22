@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./assets/css/style.css";
 import GradientImg from "./assets/img/Frame 14.png";
 import GradientImgMobile from "./assets/img/Frame 8.png";
@@ -32,7 +33,9 @@ const LoginForm = () => {
             <h4>Senha</h4>
             <input type="text" placeholder="Digite aqui" />
             <button class="forget-button">Esqueci minha senha</button>
-            <button class="next-button">Prosseguir</button>
+            <Link to="employee-listing">
+              <button class="next-button">Prosseguir</button>
+            </Link>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque rem
               voluptates fuga odio vero cupiditate voluptas accusantium

@@ -6,10 +6,10 @@ const FormWelcomeKit = () => {
 
   return (
     <>
-    <div className="container-page">
-      <LateralMenu />
+      <div className="container-page">
+        <LateralMenu />
         <Form />
-    </div>
+      </div>
     </>
   );
 };

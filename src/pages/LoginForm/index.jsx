@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./assets/css/style.css";
 import GradientImg from "./assets/img/Frame 14.png";
 import GradientImgMobile from "./assets/img/Frame 8.png";
@@ -7,7 +8,7 @@ import Logo from "./assets/img/Logo (1).svg";
 const LoginForm = () => {
   return (
     <>
-      <div class="full-container">
+      <div class="full-login">
         <img
           class="gradient-web"
           src={GradientImg}
@@ -24,7 +25,7 @@ const LoginForm = () => {
           sua empresa
         </h1>
         </div>
-        <div class="container-form">
+        <div class="login-form">
           <form class="login-logo">
             <img src={Logo} alt="" />
             <h4>E-mail</h4>
@@ -32,12 +33,11 @@ const LoginForm = () => {
             <h4>Senha</h4>
             <input type="text" placeholder="Digite aqui" />
             <button class="forget-button">Esqueci minha senha</button>
-            <button class="next-button">Prosseguir</button>
+            <Link to="employee-listing">
+              <button class="login-button">Prosseguir</button>
+            </Link>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque rem
-              voluptates fuga odio vero cupiditate voluptas accusantium
-              laudantium voluptatum facilis temporibus praesentium neque ducimus
-              libero, distinctio totam possimus sit obcaecati.
+              Bem-vindo ao nosso portal de gestão de Recursos Humanos, o seu parceiro confiável para otimizar a força de trabalho e impulsionar o sucesso da sua empresa.
             </p>
           </form>
         </div>

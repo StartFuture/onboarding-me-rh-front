@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-.full-container {
+.full-login {
   display: flex;
   height: 100vh;
 }
@@ -31,7 +31,7 @@
   height: 18%;
 }
 
-.container-form {
+.login-form {
   display: inline-block;
   width: 53%;
   height: 100%;
@@ -47,12 +47,16 @@
   color: red;
 }
 
-.next-button {
-  margin: 50px 0px;
+.login-button {
   width: 100%;
-  background-color: rgba(206, 51, 45, 1);
   border: none;
-  font-size: 16px;
+  border-radius: 4px;
+  background: #ce332d;
+  color: #ffff;
+  padding: 10px 0px;
+  margin: 20px 0px;
+  font-size: large;
+  cursor: pointer;
 }
 
 .login-logo h4 {
@@ -98,7 +102,7 @@
     z-index: 2;
   }
 
-  .full-container {
+  .full-login {
     display: flex;
   }
 
@@ -135,7 +139,7 @@
     display: none;
   }
 
-  .container-form {
+  .login-form {
     margin-top: 270px;
     border-radius: 20px;
     position: absolute;
